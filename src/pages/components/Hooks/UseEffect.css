@@ -1,0 +1,40 @@
+.pd {
+  padding: 200px 0;
+}
+.pd h2 {
+  color: white;
+  text-align: center;
+}
+.btn-center {
+  display: flex;
+  justify-content: center;
+}
+.btn-center button {
+  padding: 6px 16px;
+}
+.name {
+  color: white;
+  border: 2px solid white;
+  width: 30%;
+  padding: 6px 12px;
+  margin: 10px auto;
+}
+
+.mr {
+  width: 60px;
+  display: inline-block;
+}
+
+.mr.l-name {
+  margin: 0 60px 0 20px;
+}
+
+.vs {
+  margin: 0 20px;
+  color: #ed2939;
+  font-size: 10px;
+}
+
+.name img {
+  width: 30px;
+}

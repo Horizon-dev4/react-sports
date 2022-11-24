@@ -1,0 +1,1282 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+/*common css start*/
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+button,
+a {
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+h1 {
+  font-size: 48px;
+  font-family: "Dancing Script", cursive;
+  position: relative;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+img {
+  width: 100%;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  /* background: -webkit-linear-gradient(left, #7323DC, #7B00B9); */
+  background: #000;
+}
+.mt-20 {
+  margin-top: 55px;
+}
+/*common css End*/
+
+/* header css Start */
+
+.header-section {
+  padding-top: 10px;
+  position: fixed;
+  width: 100%;
+  background: #000;
+  z-index: 999;
+  height: 70px;
+  box-shadow: rgb(209 209 209 / 36%) 4px 25px 20px -20px;
+}
+.nav-p {
+  padding: 0 6%;
+}
+.logo-outer {
+  display: block;
+}
+.nav-content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.nav-items-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+  padding-left: 0;
+  height: 100%;
+}
+.nav-item-list {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.nav-item-link {
+  display: block;
+  border: 1px solid #fff;
+  padding: 5px 15px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 5px;
+}
+.nav-item-link:hover {
+  color: #ee9ca7;
+}
+
+.nav-item-list:last-child {
+  margin-right: 0;
+}
+
+.nav-item-link.login-btn {
+  font-size: 20px;
+  margin-left: 16px;
+  border: transparent;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background: #fc0;
+  color: #000;
+  padding: 5px 60px;
+  border-radius: 30px;
+}
+
+.nav-item-link.login-btn:hover {
+  opacity: 0.8;
+}
+
+/*Nav Toggle Btn*/
+.nav-toggle-btn .btn-inner {
+  width: 26px;
+  border-bottom: 1px solid #ffffff;
+  position: relative;
+  transition: all 0.4s ease;
+}
+.nav-toggle-btn {
+  height: 30px;
+  width: 40px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ffffff;
+  padding: 5px;
+  border-radius: 5px;
+  display: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 99;
+}
+.nav-toggle-btn .btn-inner:before {
+  content: "";
+  height: 1px;
+  width: 26px;
+  position: absolute;
+  background: #ffffff;
+  top: -7px;
+}
+.nav-toggle-btn .btn-inner:after {
+  content: "";
+  height: 1px;
+  width: 26px;
+  position: absolute;
+  background: #ffffff;
+  top: 7px;
+}
+/*/Nav Toggle Btn*/
+
+/* header css end */
+
+/*  header main section css start */
+.home-main-section {
+  /* padding: 30px 0; */
+  position: relative;
+  padding-top: 100px;
+  z-index: 11;
+}
+.tournament-items-inner {
+  box-shadow: rgb(100 96 96 / 24%) 0px 3px 8px;
+  height: 100vh;
+  background: #242424;
+  border-radius: 5px;
+}
+
+.tournament-items-inner .title {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 6px;
+  border-bottom: 1px solid #bf8383;
+  color: #fff;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.tournament-items-list {
+  padding-left: 0;
+}
+
+.tournament-item {
+  border-bottom: 1px solid #333;
+}
+
+.tournament-item a {
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  display: block;
+  padding: 5px;
+  transition: all 0.3s ease;
+}
+.tournament-item a i {
+  margin-right: 5px;
+}
+.tournament-item:hover a {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.match-category-items-inner {
+  text-align: center;
+}
+.match-category-item:hover {
+  background: #c13500;
+  color: #fff;
+  transition: all 0.3s ease;
+  border: transparent;
+}
+
+.match-category-item {
+  display: inline-block;
+  margin-right: 13px;
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 5px 20px;
+  color: #000;
+  font-family: "Poppins";
+  font-weight: 600;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.match-schedule-items-wrapper {
+  box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+  padding: 20px 0px;
+  height: auto;
+  background: #242424;
+  border-radius: 5px;
+}
+
+.match-schedule-items-wrapper .date-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #bf8383;
+  padding-bottom: 5px;
+  padding-left: 10px;
+}
+
+.match-item-outer {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #333;
+  margin-bottom: 10px;
+  padding: 10px 0;
+  padding-left: 10px;
+  transition: all 0.3s ease;
+}
+.match-item-outer:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.match-item-outer .match-time {
+  text-align: center;
+  margin-right: 20px;
+  color: #fff;
+}
+
+.match-item-outer .match-time i {
+  font-size: 20px;
+}
+
+.match-item-outer .match-time p {
+  margin-bottom: 0;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.match-item-outer .match-name p {
+  margin-bottom: 0;
+  border: 1px solid #ddd;
+  padding: 6px;
+  margin-right: 20px;
+  font-family: "Poppins";
+  font-size: 14px;
+  color: #fff;
+}
+
+.match-item-outer .match-type p {
+  margin-bottom: 0;
+  border: 1px solid #ddd;
+  padding: 6px;
+  margin-right: 20px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.match-item-outer .predition-btn a {
+  display: inline-block;
+  padding: 4px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: #000;
+  font-weight: 400;
+  background: #fc0;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.match-item-outer .predition-btn a:hover {
+  opacity: 0.8;
+}
+
+.forum-items-inner {
+  box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+  height: 100vh;
+  background: #242424;
+  border-radius: 5px;
+}
+
+.forum-items-inner .title {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  border-bottom: 1px solid #bf8383;
+  color: #fff;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.forum-items-list {
+  padding-left: 0;
+}
+
+.forum-item {
+  border-bottom: 1px solid #333;
+  padding: 5px 0px 5px 5px;
+}
+
+.forum-item span {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fc0;
+}
+
+.forum-item a {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.forum-item a:hover {
+  color: #c13500;
+}
+/*  header main section css End */
+
+/*Result page Design css start*/
+.p-20 {
+  padding: 20px;
+}
+.team-name-outer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+.match-schedule-items-wrapper.p-20 {
+  height: auto;
+}
+.team-name-outer .first-team {
+  background: #fc0;
+  padding: 10px 20px;
+  color: #000;
+  font-size: 18px;
+  border-radius: 3px;
+  margin-bottom: 0;
+}
+.team-score-high .score {
+  background: #4ec94e;
+  padding: 20px 30px;
+  border-radius: 50%;
+  margin-bottom: 0;
+}
+
+.team-score-low .score {
+  background: #a5c94e;
+  padding: 20px 30px;
+  border-radius: 50%;
+  margin-bottom: 0;
+}
+.team-score-content .top-cont {
+  text-align: center;
+  font-size: 16px;
+}
+.team-score-content .bottom-cont {
+  font-size: 18px;
+  color: #fff;
+}
+.team-score-content .top-cont i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+.team-score-outer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 40px 0;
+  color: #fff;
+}
+.bet-team-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 6px;
+}
+.vote-content-left {
+  color: #fff;
+}
+.best-score-outer {
+  color: #fff;
+}
+.bet-team-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.vote-content-title {
+  color: #fff;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.vote-content-left .vote-first-team {
+  background: #fc0;
+  padding: 10px 2px;
+  text-align: center;
+  color: #000;
+  font-size: 16px;
+  text-transform: capitalize;
+  border-radius: 5px;
+}
+.vote-content-left .vote-second-team {
+  background: #fc0;
+  padding: 10px 0;
+  text-align: center;
+  color: #000;
+  font-size: 17px;
+  text-transform: capitalize;
+  border-radius: 5px;
+}
+.best-score-outer .top-title {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #fff;
+}
+.bet-team-title .bet-team-1 {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #fff;
+}
+.bet-team-item .left span {
+  color: #fc0;
+  font-size: 14px;
+}
+.bet-team-item .right a {
+  display: inline-block;
+  border: 1px solid #fc0;
+  padding: 2px 6px;
+  color: #fff;
+  font-weight: 500;
+  margin-left: 5px;
+  transition: all 0.3s ease;
+}
+.bet-team-item .right a:hover {
+  background: #fc0;
+  color: #000;
+}
+.live-match-outer .title {
+  color: #fff;
+  font-size: 16px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+.live-match-items {
+  padding-left: 0;
+}
+.live-match-items li a {
+  display: block;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 8px;
+  transition: all 0.3s ease;
+}
+.live-match-items li:hover a {
+  background: #ddd;
+  color: #000;
+}
+.recent-performance {
+  color: #fff;
+}
+
+.recent-performance-table {
+  width: 100%;
+  text-align: center;
+}
+
+.recent-performance-title {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.recent-performance-table tr th {
+  background: #fc0;
+  color: #000;
+  padding: 7px 0;
+}
+
+.recent-performance-table tr td {
+  padding: 7px 0px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.recent-performance-table tbody tr:nth-child(odd) {
+  background: rgba(255, 255, 255, 0.1);
+}
+.year-score-title {
+  color: #fff;
+  margin: 20px 0;
+  font-size: 20px;
+}
+.year-score-outer {
+  color: #fff;
+  display: flex;
+}
+
+.year-score-outer .left {
+  width: 50%;
+  text-align: center;
+  background: #fc0;
+  padding: 8px 0;
+  color: #000;
+  font-size: 17px;
+  font-weight: 500;
+}
+.year-score-outer .right {
+  width: 50%;
+  background: #fb7;
+  text-align: center;
+  padding: 8px 0;
+  color: #000;
+  font-size: 17px;
+  font-weight: 500;
+}
+.post-comment-outer {
+  margin-top: 20px;
+  color: #fff;
+}
+.post-comment-outer .title {
+  font-size: 22px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+.comments-item {
+  margin-bottom: 20px;
+  padding: 10px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+.comment-like-reply-count .like-comment {
+  margin-bottom: 0;
+}
+/*Result page Design css End*/
+
+/*News page design css Start*/
+.match-schedule-items-wrapper.plr-40 {
+  height: auto;
+}
+.plr-40 {
+  padding: 20px 40px;
+}
+.select-date-heading {
+  color: #fff;
+  font-weight: 500;
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+
+.select-date-heading .date {
+  color: #fc0;
+}
+
+.team-score-item-outer {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.team-score-item-outer .total-score-inner {
+  margin-right: 40px;
+}
+
+.total-score-inner p {
+  margin-bottom: 0;
+}
+
+.total-score-inner p .team-name1 {
+  font-size: 20px;
+  color: #fc0;
+}
+
+.total-score-inner p .team-score {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.total-score-inner p .separetor {
+  padding: 0 10px;
+}
+
+.total-score-inner p .team-name2 {
+  font-size: 20px;
+  color: #ff7600;
+}
+
+.series-name p {
+  margin-bottom: 0;
+  font-size: 18px;
+}
+.team-score-item-outer:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+/*News page design css End*/
+
+/*Sports News page design css start*/
+.sports-news-heading {
+  color: #fff;
+  font-weight: 500;
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+.sport-news-item-inner {
+  color: #fff;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.sport-news-item-inner .item-link {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 5px;
+  transition: all 0.3s ease;
+}
+.sport-news-item-inner .item-link .heading {
+  color: #fc0;
+  font-weight: 600;
+}
+.item-post-time {
+  text-align: end;
+  padding-right: 20px;
+  margin-bottom: 0;
+}
+.sport-news-item-inner .item-link:hover {
+  color: #fc0;
+}
+.sport-news-item-inner:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+/*Sports News page design css End*/
+
+/*dashboard css start*/
+.sport-news-item-inner .live-link {
+  text-align: end;
+  padding-right: 25px;
+  font-size: 16px;
+}
+/*dashboard css End*/
+
+/*Chart bar css start*/
+h6.prediction-bar-heading {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.type-days-outer {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  color: #fff;
+}
+
+c {
+}
+
+.type-days-outer .days {
+}
+
+.type-days-outer .game-type span {
+  font-size: 16px;
+  margin-right: 10px;
+  font-weight: 500;
+}
+
+.type-days-outer .game-type {
+  margin-right: 30px;
+}
+
+.type-days-outer .game-type a {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fc0;
+}
+
+.type-days-outer .days span {
+  font-size: 16px;
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+.type-days-outer .days a {
+  font-size: 16px;
+  display: inline-block;
+  font-weight: 600;
+  color: #fc0;
+}
+.chart {
+  --scale: 100;
+
+  /* Setup the grid */
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-rows: repeat(var(--scale), minmax(0, 1fr)) 1.4rem;
+  grid-column-gap: 5px;
+
+  /* Generate background guides */
+  /* (sub-pixel rounding errors make this imperfect) */
+  --line-every: 10;
+  background-image: linear-gradient(to bottom, #ccc 1px, transparent 1px);
+  background-size: 100% calc((100% - 1.4rem) / var(--scale) * var(--line-every));
+
+  /* other styles… */
+  margin: 2em auto 1em;
+  padding: 0 1em;
+  position: relative;
+  max-width: 70vw;
+  height: calc(100vh - 3em);
+}
+
+.chart::after {
+  background: #fff;
+  bottom: 0;
+  content: " ";
+  height: 1.4rem;
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+
+/* Dates… */
+/* ------ */
+
+.date {
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  grid-row-start: -2;
+  justify-content: center;
+  text-align: center;
+  z-index: 2;
+}
+
+/* Each bar on the graph… */
+/* ---------------------- */
+
+.bar {
+  grid-row: var(--start) / -2;
+
+  /* Background-Color */
+  background-image: linear-gradient(to right, green, yellow, orange, red);
+  background-size: 1600% 100%;
+  background-position: calc(var(--start) * 1%) 0;
+
+  /* Other styles… */
+  border-radius: 5px 5px 0 0;
+  color: #000;
+  list-style: none;
+  position: relative;
+}
+
+.value {
+  background: #fff;
+  bottom: 100%;
+  display: inline-block;
+  left: 50%;
+  padding: 0 0.4em;
+  position: absolute;
+  transform: translate(-50%, -1px);
+}
+
+/* Global helpers… */
+/* --------------- */
+
+:root {
+  font-size: 80%;
+  font-family: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*Chart bar css End*/
+
+/**/
+.main-heading {
+  color: #fff;
+  padding-left: 10px;
+  margin-bottom: 30px;
+  font-size: 27px;
+  font-weight: 600;
+}
+/**/
+
+/* MODAL */
+.sign-in-modal {
+  cursor: url("https://png.icons8.com/ios/30/000000/multiply.png"), auto;
+  z-index: 999999999999;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.48);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  pointer-events: none;
+}
+.sign-in-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.sign-in-modal .inner--sign-in-modal {
+  transform: translateZ(121px);
+  min-width: 480px;
+  height: auto;
+  background: #fff;
+  box-shadow: 1px 2px 18px rgba(0, 0, 0, 0.68);
+  border-radius: 4px;
+  transform: translateY(60%);
+  opacity: 0;
+  position: relative;
+}
+.sign-in-modal .inner--sign-in-modal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+.sign-in-modal .inner--sign-in-modal .val-info {
+  border-radius: 4px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+.sign-in-modal .inner--sign-in-modal .val-info .overlay {
+  z-index: -1;
+  display: block;
+  position: absolute;
+  background: -webkit-linear-gradient(left, #7323dc, #7b00b9);
+  box-shadow: 0px 1px 10px rgba(57, 14, 110, 0.8);
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+.sign-in-modal .inner--sign-in-modal .val-info .overlay.sign-in-side {
+  width: 50%;
+  margin-right: 50%;
+  border-radius: 4px 0 0 0;
+  transition: 0.6s;
+}
+.sign-in-modal .inner--sign-in-modal .val-info .overlay.sign-up-side {
+  width: 50%;
+  margin-left: 50%;
+  border-radius: 0 4px 0 0;
+  transition: 0.6s;
+}
+.sign-in-modal .inner--sign-in-modal .val-info .tab {
+  box-shadow: 1px 2px 18px rgba(0, 0, 0, 0.18);
+  width: 50%;
+  height: 55px;
+  background: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c8c8c8;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 600;
+  transition: 0.5s;
+  font-family: "Montserrat";
+}
+.sign-in-modal .inner--sign-in-modal .val-info .tab.active {
+  background: #fc0;
+  color: #fff;
+}
+.sign-in-modal .inner--sign-in-modal .val-info .tab-sign-in {
+  cursor: pointer;
+}
+.sign-in-modal .inner--sign-in-modal .val-info .tab-sign-up {
+  cursor: pointer;
+}
+.sign-in-modal .inner--sign-in-modal .content-info {
+  min-height: 500px;
+  position: relative;
+  overflow-x: hidden;
+}
+.sign-in-modal .inner--sign-in-modal .content-info .content-sign-in {
+  cursor: default;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  transition: 0.6s;
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.sign-in-modal .inner--sign-in-modal .content-info .content-sign-in.active {
+  transition: 0.6s;
+  left: 0;
+}
+.sign-in-modal
+  .inner--sign-in-modal
+  .content-info
+  .content-sign-in
+  .wrap--content-sign-in {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.sign-in-modal
+  .inner--sign-in-modal
+  .content-info
+  .content-sign-in
+  .wrap--content-sign-in
+  .greetings {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  font-family: "Lato";
+}
+.sign-in-modal
+  .inner--sign-in-modal
+  .content-info
+  .content-sign-in
+  .wrap--content-sign-in
+  form {
+  width: 90%;
+}
+.sign-in-modal
+  .inner--sign-in-modal
+  .content-info
+  .content-sign-in
+  .wrap--content-sign-in
+  form
+  .input-control {
+  width: 100%;
+  margin: auto auto 20px auto;
+}
+.sign-in-modal
+  .inner--sign-in-modal
+  .content-info
+  .content-sign-in
+  .wrap--content-sign-in
+  form
+  .input-control
+  input {
+  width: 100%;
+  height: 45px;
+  border: 1px solid #ccc;
+  box-shadow: none;
+  background: transparent;
+  border-radius: 4px;
+  padding-left: 12px;
+}
+.sign-in-modal
+  .inner--sign-in-modal
+  .content-info
+  .content-sign-in
+  .wrap--content-sign-in
+  form
+  button {
+  width: 100%;
+  transition: 0.45s;
+  height: 50px;
+  color: #fff;
+  border: 1px solid #fc0;
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 22px;
+  text-align: center;
+  transition: 0.3s cubic-bezier(0.25, 0.8, 0.95, 1);
+  transition: padding 0s;
+  background: #fc0;
+}
+.sign-in-modal
+  .inner--sign-in-modal
+  .content-info
+  .content-sign-in
+  .wrap--content-sign-in
+  form
+  button:hover {
+  background: transparent;
+  color: #6c6c6c;
+  border: 1px solid #c6c6c6;
+}
+.sign-in-modal
+  .inner--sign-in-modal
+  .content-info
+  .content-sign-in
+  .wrap--content-sign-in
+  .close-login {
+  cursor: pointer;
+  width: 100px;
+  padding: 12px;
+  text-align: center;
+  margin-top: 20px;
+  position: absolute;
+  bottom: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  font-size: 16px;
+  color: #333;
+}
+.sign-in-modal
+  .inner--sign-in-modal
+  .content-info
+  .content-sign-in
+  .wrap--content-sign-in
+  .close-login
+  span {
+  font-size: 14px;
+  display: inline-block;
+  color: #666;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.sign-in-modal
+  .inner--sign-in-modal
+  .content-info
+  .content-sign-in
+  .wrap--content-sign-in
+  .close-login
+  span:first-child {
+  margin-left: 2px;
+}
+.sign-in-modal .inner--sign-in-modal .content-info .content-sign-up {
+  cursor: default;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  transition: 0.6s;
+  padding: 45px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.sign-in-modal .inner--sign-in-modal .content-info .content-sign-up.active {
+  transition: 0.6s;
+  left: 0;
+}
+.sign-in-modal
+  .inner--sign-in-modal
+  .content-info
+  .content-sign-up
+  .wrap--content-sign-up {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.sign-in-modal
+  .inner--sign-in-modal
+  .content-info
+  .content-sign-up
+  .wrap--content-sign-up
+  .greetings {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  font-family: "Lato";
+}
+.sign-in-modal
+  .inner--sign-in-modal
+  .content-info
+  .content-sign-up
+  .wrap--content-sign-up
+  .greetings
+  span {
+  text-transform: capitalize;
+  display: inline-block;
+  background: -webkit-linear-gradient(left, #7323dc, #7b00b9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.sign-in-modal
+  .inner--sign-in-modal
+  .content-info
+  .content-sign-up
+  .wrap--content-sign-up
+  form {
+  width: 90%;
+}
+.sign-in-modal
+  .inner--sign-in-modal
+  .content-info
+  .content-sign-up
+  .wrap--content-sign-up
+  form
+  .input-control {
+  width: 100%;
+  margin: auto auto 20px auto;
+}
+.sign-in-modal
+  .inner--sign-in-modal
+  .content-info
+  .content-sign-up
+  .wrap--content-sign-up
+  form
+  .input-control
+  input {
+  width: 100%;
+  height: 45px;
+  border: 1px solid #ccc;
+  box-shadow: none;
+  background: transparent;
+  border-radius: 4px;
+  padding-left: 12px;
+}
+.sign-in-modal
+  .inner--sign-in-modal
+  .content-info
+  .content-sign-up
+  .wrap--content-sign-up
+  form
+  button {
+  width: 100%;
+  transition: 0.45s;
+  height: 50px;
+  color: #fff;
+  border: 1px solid #fc0;
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 22px;
+  text-align: center;
+  transition: 0.3s cubic-bezier(0.25, 0.8, 0.95, 1);
+  transition: padding 0s;
+  background: #fc0;
+}
+.sign-in-modal
+  .inner--sign-in-modal
+  .content-info
+  .content-sign-up
+  .wrap--content-sign-up
+  form
+  button:hover {
+  background: transparent;
+  color: #6c6c6c;
+  border: 1px solid #c6c6c6;
+}
+.sign-in-modal .inner--sign-in-modal .content-info .close-login {
+  cursor: pointer;
+  width: 100px;
+  padding: 12px;
+  text-align: center;
+  margin-top: 20px;
+  position: absolute;
+  bottom: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  font-size: 16px;
+  color: #333;
+}
+.sign-in-modal .inner--sign-in-modal .content-info .close-login span {
+  font-size: 14px;
+  display: inline-block;
+  color: #666;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.sign-in-modal
+  .inner--sign-in-modal
+  .content-info
+  .close-login
+  span:first-child {
+  margin-left: 2px;
+}
+
+/* footer css */
+.footer {
+  margin-top: 10px;
+  border-top: 4px solid #fc0;
+}
+
+.footer-top {
+  width: 12%;
+  margin: 0 auto;
+  padding: 50px 0 40px 0;
+}
+
+.footer-social {
+  text-align: center;
+}
+.footer-social a {
+  padding: 16px 10px;
+}
+.footer-social i {
+  color: #fff;
+  font-size: 24px;
+}
+
+.footer-social i:hover {
+  color: #fc0;
+}
+
+.footer p {
+  text-align: center;
+  color: #fff;
+  margin-top: 10px;
+  font-size: 10px;
+}

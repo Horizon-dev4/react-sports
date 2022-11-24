@@ -1,0 +1,98 @@
+.games-menu {
+  margin-bottom: 30px;
+  padding-top: 10px;
+  height: 40px;
+  background-color: #0087d2;
+}
+
+.games-menu ul {
+  display: flex;
+  justify-content: center;
+}
+
+.games-menu ul li a {
+  color: #fff !important;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  margin: 0 18px;
+  padding-bottom: 10px;
+}
+
+.games-menu ul li a:hover {
+  border-bottom: 1px solid #fc0;
+}
+.games-menu ul li a img {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+@media (max-width: 900px) {
+  .games-menu ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .games-menu {
+    margin-bottom: 250px;
+  }
+}
+
+/* live match odds borders */
+.match-heading {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.match-heading h4 {
+  color: #fff;
+  width: 50%;
+}
+.match-heading .line {
+  height: 2px;
+  width: 310px;
+  background-color: #fc0;
+  margin-top: 12px;
+}
+.match-border {
+  border: 1px solid #fc0;
+  color: #fff;
+  padding: 12px 0 0 8px;
+  margin-bottom: 30px;
+}
+
+.live-match-left p {
+  color: rgb(80, 80, 80);
+  font-size: 12px;
+}
+
+.live-match-middle,
+.live-match-right {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0 10px 0;
+}
+
+.live-match-middle p {
+  margin-top: 10px;
+}
+
+.live-match-middle span {
+  border: 2px solid rgb(92, 91, 91);
+  padding: 8px 6px;
+}
+
+.live-match-right button {
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #fc0;
+  padding: 6px 10px;
+}
+
+.live-match-right button:hover {
+  background-color: #fff;
+  border-radius: 6px;
+}

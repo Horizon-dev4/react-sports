@@ -1,0 +1,70 @@
+/* page changing tab */
+.page-changing-tab {
+  border: 1px solid #fc0;
+  padding: 12px 0;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.page-changing-tab:hover {
+  cursor: pointer;
+  background-color: #fc0;
+  transition: all 0.4s ease-out;
+}
+
+.page-changing-tab span {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.bg-yellow {
+  background-color: #fc0;
+}
+/* middle section css */
+.middle h2 {
+  color: #fff;
+  text-align: center;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.table-header {
+  background-color: #fc0;
+}
+
+.table-row {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+
+.table-cell {
+  font-family: "poppins";
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.table-cell:nth-of-type(2) {
+  width: 20%;
+}
+
+.table-body {
+  background-color: #333;
+}
+
+.table-body .table-cell {
+  color: #fff;
+  font-size: 14px;
+}
+
+.table-body .table-cell:nth-of-type(2) {
+  padding-left: 10px;
+  width: 20%;
+}
+
+/* group-B css starts here */
