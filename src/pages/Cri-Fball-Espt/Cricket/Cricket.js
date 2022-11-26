@@ -28,12 +28,12 @@ function Cricket() {
                     </Link>
                   </li>
                   <li>
-                    <Link to="/">
+                    <Link to="/lol">
                       Teams
                     </Link>
                   </li>
                   <li>
-                    <Link to="/">
+                    <Link to="/esports">
                       Series Archive
                     </Link>
                   </li>
