@@ -62,8 +62,27 @@ body {
   padding-left: 170px;
   padding-top: 10px;
 }
+
+@media screen and (min-width: 990px) and (max-width: 1200px) {
+  .nav-p {
+    padding-left: 130px;
+  }
+}
+@media (max-width: 991px) {
+  .nav-p {
+    padding-left: 60px;
+  }
+  .nav-item-list {
+    margin-top: 14px;
+  }
+}
+
 .logo-outer {
   display: block;
+}
+
+.bg-primary {
+  background-color: #000000f2 !important;
 }
 .nav-content-wrapper {
   display: flex;
