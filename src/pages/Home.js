@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <React.Fragment>
-
       <section class="home-main-section">
         <div class="container">
           <div class="row">
@@ -13,7 +12,7 @@ export default function Home() {
                 <h6 class="title">Tournaments</h6>
                 <ul class="tournament-items-list">
                   <li class="tournament-item">
-                    <Link to="/first" >
+                    <Link to="/first">
                       <i class="far fa-futbol"></i>
                       FIFA World Cup 2022
                     </Link>
@@ -173,16 +172,16 @@ export default function Home() {
                   <li class="forum-item">
                     <span>API Data</span>
                     <Link to="/UseEffect"> Matches </Link>
-                    
                   </li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
+
+        
       </section>
 
-      
       <script src="assets/js/jquery-3.6.0.min.js"></script>
       <script src="assets/js/slick.min.js"></script>
       <script src="assets/js/bootstrap.min.js"></script>

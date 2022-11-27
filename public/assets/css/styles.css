@@ -59,7 +59,8 @@ body {
   box-shadow: rgb(209 209 209 / 36%) 4px 25px 20px -20px;
 }
 .nav-p {
-  padding: 0 6%;
+  padding-left: 170px;
+  padding-top: 10px;
 }
 .logo-outer {
   display: block;
