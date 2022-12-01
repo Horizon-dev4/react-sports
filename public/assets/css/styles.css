@@ -79,6 +79,13 @@ body {
 
 .logo-outer {
   display: block;
+  width: 121px;
+  height: 56px;
+  margin-right: 20px;
+}
+
+.logo-outer img {
+  margin-top: -30px;
 }
 
 .bg-primary {
@@ -1276,7 +1283,7 @@ c {
 .footer-top {
   width: 12%;
   margin: 0 auto;
-  padding: 50px 0 40px 0;
+  padding-top: 30px;
 }
 
 .footer-social {

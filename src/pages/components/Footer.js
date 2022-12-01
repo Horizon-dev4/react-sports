@@ -5,7 +5,7 @@ function Footer() {
     <>
       <footer class="footer">
         <div class="footer-top">
-          <img src="assets/images/Folio.png" />
+          <img src="assets/images/Logo2.png" />
         </div>
         <div class="footer-social">
           <a href="#">

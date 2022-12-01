@@ -55,7 +55,7 @@ function Header() {
           <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
             <div class="container">
               <Link to="/" className="logo-outer">
-                <img src="assets/images/Folio.png" />
+                <img src="assets/images/Logo2.png" />
               </Link>
               <button
                 class="navbar-toggler"
