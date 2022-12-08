@@ -1323,6 +1323,37 @@ c {
   margin: 0 auto;
 }
 
+.footer-menu {
+  border-top: 1px solid #2a2a2a;
+  border-bottom: 1px solid #2a2a2a;
+  margin-bottom: 25px;
+}
+
+.footer-menu-inner {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+@media (max-width: 900px) {
+  .footer-menu {
+    width: 30%;
+  }
+  .footer-menu-inner {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-menu-inner a {
+    padding: 10px 0;
+  }
+}
+
+.footer-menu-inner a {
+  color: #fff;
+}
+
 .footer-social {
   text-align: center;
 }
