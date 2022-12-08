@@ -19,9 +19,9 @@ function Footer() {
           </a>
         </div>
         <p>
-          Copyright © 2022 Folio All rights reserved. The information contained
-          in Folio may not be published, broadcast, rewritten, or redistributed
-          without the prior written authority of Folio.
+          Copyright © 2022 "Win Bet for You" All rights reserved. The information contained
+          in Win Bet for you may not be published, broadcast, rewritten, or redistributed
+          without the prior written authority of Win Bet for you.
         </p>
       </footer>
     </>

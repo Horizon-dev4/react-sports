@@ -5,6 +5,7 @@ import Footer from './pages/components/Footer';
 import Header from './pages/components/Header';
 import UseEffect from './pages/components/Hooks/UseEffect';
 import Login from './pages/components/login/Login';
+import Contact from './pages/Contact';
 import Cricket from './pages/Cri-Fball-Espt/Cricket/Cricket';
 import CallOfDuty from './pages/Cri-Fball-Espt/Esports/CallOfDuty/CallOfDuty';
 import CsGo from './pages/Cri-Fball-Espt/Esports/CsGo/CsGo';
@@ -36,6 +37,7 @@ function App() {
         <Route path="/News" element={ <News/> } />
         <Route path="/Dashboard" element={ <Dashboard/> } />
         <Route path="/Forum" element={ <Forum/> } />
+        <Route path="/contact" element={ <Contact /> } />
         <Route path="/Login" element={ <Login /> } />
         <Route path="/UseEffect" element={ <UseEffect />} />
         <Route path="/first" element={ <First />} />
