@@ -1330,16 +1330,16 @@ c {
 }
 
 .footer-menu-inner {
-  width: 50%;
+  width: 55%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   padding: 20px 0;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 767px) {
   .footer-menu {
-    width: 30%;
+    width: 40%;
   }
   .footer-menu-inner {
     display: flex;
@@ -1347,6 +1347,14 @@ c {
   }
   .footer-menu-inner a {
     padding: 10px 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .footer-menu-inner {
+    /* display: flex;
+    flex-direction: column; */
+    width: 100%;
   }
 }
 
