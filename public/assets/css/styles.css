@@ -856,23 +856,34 @@ c {
 }
 
 .contact-form {
+  margin-left: 20px;
 }
 
 .contact-form label {
-  color: #fff;
   font-size: 16px;
   display: block;
   padding: 8px 0;
 }
 
 .contact-form input {
+  border: 3px solid #ccc;
   outline: none;
   padding: 8px 6px;
   width: 70%;
+  transition: 0.5s;
 }
 
 .contact-form textarea {
   outline: none;
+  border: 3px solid #ccc;
+  padding-left: 6px;
+  transition: 0.5s;
+}
+
+.contact-form input:focus,
+textarea:focus {
+  border: 3px solid #555;
+  margin-left: 14px;
 }
 
 .contact-form .contact-submit {
@@ -884,6 +895,9 @@ c {
   border-radius: 30px;
   border: none;
   margin-top: 10px;
+}
+.contact-submit:hover {
+  background-color: #ebbf11;
 }
 /* Contact us css ends here */
 

@@ -14,12 +14,12 @@ function Cricket() {
                 <ul>
                   <li>
                     <Link to="/">
-                      Current Matches
+                      Today Matches
                     </Link>
                   </li>
                   <li>
                     <Link to="/">
-                      Current & Future Series
+                      Upcoming Matches
                     </Link>
                   </li>
                   <li>
