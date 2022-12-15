@@ -1,0 +1,60 @@
+/* .color{
+    color:rgb(193, 193, 212);
+    display: flex;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(22, 49, 170, 0.651);
+    justify-content: center;
+    
+
+} */
+.color h4{
+    /* margin-left: 50px; */
+    /* justify-content: space-between; */
+    /* margin-right: 50px; */
+    /* text-align: center; */
+    color:white;
+}
+.Tournament_name{
+    color:white;
+    padding:0px;
+}
+
+.box{
+    width: 200px;
+    height: 100px;
+    border:1px solid white;
+    
+}
+
+.match_details_team1 {
+     color:white;
+     padding:10px 5px;
+     
+}
+
+.teamname1{
+    display: flex;
+    justify-content: space-between;
+}
+.teamname2{
+    display: flex;
+    justify-content: space-between;
+}
+
+.scorecard p{
+    justify-content: space-between;
+    display: flex;
+    padding: 10px 5px;
+    color:white
+}
+
+.results{
+justify-content: space-between;
+}
+
+.cricket-live-score {
+    color: white !important;
+    background-color: red;
+    margin-top: 30px;
+}

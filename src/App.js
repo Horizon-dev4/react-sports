@@ -7,6 +7,11 @@ import UseEffect from './pages/components/Hooks/UseEffect';
 import Login from './pages/components/login/Login';
 import Contact from './pages/Contact';
 import Cricket from './pages/Cri-Fball-Espt/Cricket/Cricket';
+import CurrentFutureSeries from './pages/Cri-Fball-Espt/Cricket/CurrentFutureSeries/CurrentFutureSeries';
+import CurrentMatches from './pages/Cri-Fball-Espt/Cricket/CurrentMatches/CurrentMatches';
+import SeriesArchive from './pages/Cri-Fball-Espt/Cricket/SeriesArchive/SeriesArchive';
+import Teams from './pages/Cri-Fball-Espt/Cricket/Teams/Teams';
+
 import CallOfDuty from './pages/Cri-Fball-Espt/Esports/CallOfDuty/CallOfDuty';
 import CsGo from './pages/Cri-Fball-Espt/Esports/CsGo/CsGo';
 import Dota2 from './pages/Cri-Fball-Espt/Esports/Dota2/Dota2';
@@ -53,6 +58,11 @@ function App() {
         <Route path="/call-of-duty" element={ <CallOfDuty /> } />
         <Route path="/starcraft" element={ <Starcraft /> } />
         <Route path="/cricket" element={ <Cricket />} />
+        <Route path="/currentfutureseries" element={ <CurrentFutureSeries />} />
+        <Route path="/currentmatches" element={ <CurrentMatches />} />
+        <Route path="/seriesarchive" element={ <SeriesArchive /> } />
+        <Route path="/teams" element={ <Teams /> } />
+
       </Routes>
       <Footer />
     </BrowserRouter>

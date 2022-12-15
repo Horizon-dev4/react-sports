@@ -1,0 +1,80 @@
+.match-heading h3{
+    display: flex;
+    text-align: center;
+    margin-left: 50px;
+    color:#fc0;
+}
+
+.para p{
+    color:white;
+    font-size: medium;
+}
+
+.slider-box{
+    width: 80%;
+    height: 60%;
+    background-color: aliceblue;
+    color:black;
+}
+.tournament_details{
+    color:aliceblue;
+    display: flex;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: blue;
+    padding:5px 2px;
+
+}
+
+.carousel-caption d-none d-md-block{
+    color:beige;
+    display: flex;
+    background-color: coral;
+}
+
+.tournament_details{
+    display: flex;
+    justify-content: space-between;
+}
+
+.match_detail_center{
+    background-color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 5px 2px;
+    color:blue;
+    font-size: medium;
+    
+
+}
+
+.location{
+    background-color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 5px 3px;
+}
+
+.match_details_team1l{
+    background-color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 5px 3px;
+    display: flex;
+    font-size: medium;
+    justify-content: space-between;
+    color:black;
+}
+
+.match_start_status {
+    background-color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding:5px 3px;
+    display: flex;
+    font-size: medium;
+    justify-content: space-between;
+    color:rgb(165, 36, 68);
+
+}
+

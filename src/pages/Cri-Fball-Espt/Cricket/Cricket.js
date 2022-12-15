@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 import "./Cricket.css";
 
 function Cricket() {
@@ -13,29 +13,19 @@ function Cricket() {
               <div className="games-menu">
                 <ul>
                   <li>
-                    <Link to="/">
-                      Today Matches
-                    </Link>
+                    <Link to="/currentmatches">Today Matches</Link>
                   </li>
                   <li>
-                    <Link to="/">
-                      Upcoming Matches
-                    </Link>
+                    <Link to="/currentfutureseries">Upcoming Matches</Link>
+                  </li>
+                  {/* <li>
+                    <Link to="/matchesbyday">Matches By Day</Link>
+                  </li> */}
+                  <li>
+                    <Link to="/teams">Teams</Link>
                   </li>
                   <li>
-                    <Link to="/">
-                      Matches By Day
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/lol">
-                      Teams
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/esports">
-                      Series Archive
-                    </Link>
+                    <Link to="/seriesarchive">Results Archive</Link>
                   </li>
                 </ul>
               </div>
@@ -65,15 +55,88 @@ function Cricket() {
 
             {/* Middle Section Starts */}
             <div className="col-lg-6 col-md-6 match-category-items-outer middle">
-                {/* Total game row */}
+              {/* Total game row */}
               <div className="row">
                 <div className="col-md-12">
-                    <div className="match-heading">
-                        <h4>LATEST NEWS</h4>
-                        <div className="line"></div>
-                    </div>
+                  <div className="match-heading">
+                    <h3>Cricket Betting Prediction, Tips and Odds</h3>
 
-                    {/* Each game row */}
+                    {/* <div className="line"></div> */}
+                  </div>
+                  <div className="para">
+                    <p>
+                      Get latest Cricket Betting Tips, Match Predictions, Guide
+                      and Live Odds for all major tournaments and leagues. Bet
+                      online by checking tips from our experts.
+                    </p>
+                  </div>
+                  {/* <section className="slider">
+                    <div className="container">
+                      <Carousel>
+                        <Carousel.Item>
+                          <Carousel.Caption>
+                            <div className="slider-box">
+                              <h3>First slide label</h3>
+                              <p>
+                                Nulla vitae elit libero, a pharetra augue mollis
+                                interdum.
+                              </p>
+                              <p>
+                                Nulla vitae elit libero, a pharetra augue mollis
+                                interdum.
+                              </p>
+                              <p>
+                                Nulla vitae elit libero, a pharetra augue mollis
+                                interdum.
+                              </p>
+                            </div>
+                          </Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item>
+                          <Carousel.Caption>
+                            <h3>Second slide label</h3>
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit.
+                            </p>
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit.
+                            </p>
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit.
+                            </p>
+                          </Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item>
+                          <img
+                            className="d-block w-100"
+                            src="holder.js/800x400?text=Third slide&bg=20232a"
+                            alt="Third slide"
+                          />
+
+                          <Carousel.Caption>
+                            <h3>Third slide label</h3>
+                            <p>
+                              Praesent commodo cursus magna, vel scelerisque
+                              nisl consectetur.
+                            </p>
+                            <p>
+                              Praesent commodo cursus magna, vel scelerisque
+                              nisl consectetur.
+                            </p>
+                            <p>
+                              Praesent commodo cursus magna, vel scelerisque
+                              nisl consectetur.
+                            </p>
+                          </Carousel.Caption>
+                        </Carousel.Item>
+                      </Carousel>
+                    </div>
+                  </section> */}
+
+                  {/* Each game row */}
                   {/* <div className="row match-border">
                     <div className="col-lg-3 col-md-3">
                       <div className="live-match-left">
@@ -97,8 +160,8 @@ function Cricket() {
                     </div>
                   </div> */}
 
-                   {/* Each game row */}
-                   {/* <div className="row match-border">
+                  {/* Each game row */}
+                  {/* <div className="row match-border">
                     <div className="col-lg-3 col-md-3">
                       <div className="live-match-left">
                         <h5>ESL ANZ Championship</h5>
@@ -121,8 +184,8 @@ function Cricket() {
                     </div>
                   </div> */}
 
-                   {/* Each game row */}
-                   {/* <div className="row match-border">
+                  {/* Each game row */}
+                  {/* <div className="row match-border">
                     <div className="col-lg-3 col-md-3">
                       <div className="live-match-left">
                         <h5>ESL ANZ Championship</h5>
@@ -144,10 +207,186 @@ function Cricket() {
                       </div>
                     </div>
                   </div> */}
-                  
+
+                  <div
+                    id="carouselExampleCaptions"
+                    class="carousel slide"
+                    data-bs-ride="carousel"
+                  >
+                    <div class="carousel-indicators">
+                      <button
+                        type="button"
+                        data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide-to="0"
+                        class="active"
+                        aria-current="true"
+                        aria-label="Slide 1"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide-to="1"
+                        aria-label="Slide 2"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide-to="2"
+                        aria-label="Slide 3"
+                      ></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <div class="cricket">
+                          <div class="tournament_details">
+                            <span class="1">T10</span>
+                            <strong>T10 League</strong>
+                          </div>
+                          <div class="match_detail_center">
+                            Nov 27, 2022 - 07:00 IST / 1:30 GMT
+                          </div>
+                          <div class="location">
+                            Sheikh Zayed Stadium, Abu Dhabi - United Arab
+                            Emirates
+                          </div>
+                          <div class="match_details_team1l">
+                            <div class="teamname">Bangla Tigers</div>
+                            <div class="team_a_6541">0/0(0)</div>
+                          </div>
+                          <div class="match_details_team1l">
+                            <div class="teamname">Northern Warriors</div>
+                            <div class="team_a_6541">0/0 (0)</div>
+                          </div>
+                          <div class="match_start_status">
+                            Prediction Coming soon
+                          </div>
+                        </div>
+                        <div class="carousel-caption d-none d-md-block">
+                          {/* <h5>First slide label</h5>
+                          <p>
+                            Some representative placeholder content for the
+                            first slide.
+                          </p> */}
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="cricket">
+                          <div class="tournament_details">
+                            <span class="1">ODI</span>
+                            <strong>NZ vs IND 2nd ODI</strong>
+                          </div>
+                          <div class="match_detail_center">
+                            Nov 27, 2022 - 07:00 IST / 1:30 GMT
+                          </div>
+                          <div class="location">
+                            Seddon Park, Hamilton - New Zealand
+                          </div>
+
+                          <div class="match_details_team1l">
+                            <div class="teamname">New Zealand</div>
+                            <div class="team_a_6541">255/8(50)</div>
+                          </div>
+
+                          <div class="match_details_team1l">
+                            <div class="teamname">India</div>
+                            <div class="team_a_6541">22/0 (4.5)</div>
+                          </div>
+                          <div class="match_start_status">
+                            Prediction Coming soon
+                          </div>
+                        </div>
+
+                        <div class="carousel-caption d-none d-md-block"></div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="cricket">
+                          <div class="tournament_details">
+                            <span class="1">ODI</span>
+                            <strong>SL vs AFG 2nd ODI</strong>
+                          </div>
+                          <div class="match_detail_center">
+                            Nov 27, 2022 - 07:00 IST / 1:30 GMT
+                          </div>
+                          <div class="location">
+                            Pallekele Cricket Stadium, Kandy - Sri Lanka
+                          </div>
+
+                          <div class="match_details_team1l">
+                            <div class="teamname">Sri Lanka</div>
+                            <div class="team_a_6541">0/0(0)</div>
+                          </div>
+
+                          <div class="match_details_team1l">
+                            <div class="teamname">Afghanistan</div>
+                            <div class="team_a_6541">0/0 (0)</div>
+                          </div>
+                          <div class="match_start_status">
+                            Prediction Coming soon
+                          </div>
+                        </div>
+
+                        <div class="carousel-caption d-none d-md-block"></div>
+                      </div>
+
+                      <div class="carousel-item">
+                        <div class="cricket">
+                          <div class="tournament_details">
+                            <span class="1">ODI</span>
+                            <strong>SL vs AFG 2nd ODI</strong>
+                          </div>
+                          <div class="match_detail_center">
+                            Nov 27, 2022 - 07:00 IST / 1:30 GMT
+                          </div>
+                          <div class="location">
+                            Pallekele Cricket Stadium, Kandy - Sri Lanka
+                          </div>
+
+                          <div class="match_details_team1l">
+                            <div class="teamname">Sri Lanka</div>
+                            <div class="team_a_6541">0/0(0)</div>
+                          </div>
+
+                          <div class="match_details_team1l">
+                            <div class="teamname">Afghanistan</div>
+                            <div class="team_a_6541">0/0 (0)</div>
+                          </div>
+                          <div class="match_start_status">
+                            Prediction Coming soon
+                          </div>
+                        </div>
+
+                        <div class="carousel-caption d-none d-md-block"></div>
+                      </div>
+                    </div>
+                    <button
+                      class="carousel-control-prev"
+                      type="button"
+                      data-bs-target="#carouselExampleCaptions"
+                      data-bs-slide="prev"
+                    >
+                      <span
+                        class="carousel-control-prev-icon"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button
+                      class="carousel-control-next"
+                      type="button"
+                      data-bs-target="#carouselExampleCaptions"
+                      data-bs-slide="next"
+                    >
+                      <span
+                        class="carousel-control-next-icon"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
+
             {/* Middle Section Ends*/}
 
             <div className="col-lg-4 col-md-4 forum-items-outer">
@@ -184,9 +423,9 @@ function Cricket() {
             </div>
           </div>
         </div>
-      </section> 
+      </section>
     </>
-  )
+  );
 }
 
-export default Cricket
+export default Cricket;

@@ -1326,6 +1326,42 @@ textarea:focus {
   margin-left: 2px;
 }
 
+/* currentmatches css start*/
+
+.cricket-live-score {
+  color: white;
+  margin-top: 30px;
+  background-color: #485858;
+  padding: 14px 10px;
+  border-radius: 6px;
+}
+.cricket-live-score-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cricket-score-middle h4 {
+  color: #fc0;
+}
+
+.cricket-live-score-details .team-name-color {
+  color: #9cbee7;
+  font-family: roboto;
+  font-weight: 600;
+}
+
+.cricket-live-score-details .team-score-color {
+  color: #72b9b9;
+}
+
+.cricket-live-score-details .cricket-team1 {
+  padding-top: 40px;
+}
+
+.cricket-live-score-details .cricket-team2 {
+  padding-top: 40px;
+}
+
 /* footer css */
 .footer {
   margin-top: 10px;
