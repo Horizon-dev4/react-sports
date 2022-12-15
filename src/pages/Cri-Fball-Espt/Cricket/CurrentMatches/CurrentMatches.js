@@ -83,6 +83,9 @@ export default class CurrentMatches extends Component {
                       <Link to="/currentmatches">TODAY MATCHES</Link>
                     </li>
                     <li>
+                      <Link to="/seriesarchive">RESULTS</Link>
+                    </li>
+                    <li>
                       <Link to="/currentfutureseries">UPCOMING MATCHES</Link>
                     </li>
                     {/* <li>
@@ -90,9 +93,6 @@ export default class CurrentMatches extends Component {
                     </li> */}
                     <li>
                       <Link to="/teams">Teams</Link>
-                    </li>
-                    <li>
-                      <Link to="/seriesarchive">RESULTS ARCHIVE</Link>
                     </li>
                   </ul>
                 </div>
