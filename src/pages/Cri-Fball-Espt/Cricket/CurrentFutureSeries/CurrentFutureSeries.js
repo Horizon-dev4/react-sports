@@ -144,6 +144,9 @@ console.log(d)
                       <Link to="/currentmatches">TODAY MATCHES</Link>
                     </li>
                     <li>
+                      <Link to="/seriesarchive">RESULTS</Link>
+                    </li>
+                    <li>
                       <Link to="/currentfutureseries">UPCOMING MATCHES</Link>
                     </li>
                     {/* <li>
@@ -152,9 +155,7 @@ console.log(d)
                     <li>
                       <Link to="/teams">Teams</Link>
                     </li>
-                    <li>
-                      <Link to="/seriesarchive">RESULTS ARCHIVE</Link>
-                    </li>
+                    
                   </ul>
                 </div>
               </div>
