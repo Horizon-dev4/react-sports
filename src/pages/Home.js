@@ -46,7 +46,7 @@ export default function Home() {
             </div>
             <div class="col-lg-6 col-md-6 match-category-items-outer">
               <div class="match-category-items-inner">
-                <Link to="/cricket" class="match-category-item">
+                <Link to="/currentmatches" class="match-category-item">
                   Cricket
                 </Link>
                 <a href="javascript:void(0)" class="match-category-item">

@@ -5,7 +5,9 @@ class DataTable extends Component {
     return (
       <tr>
         <div className="cricket-live-score">
-          <div className="cricket-live-score-details">
+          <div className="row"> 
+
+            <div className="col-md-3">
             <div className="cricket-team1">
               <p className="team-name-color">
                 {this.props.obj.Events[0].T1[0].Nm}
@@ -25,6 +27,9 @@ class DataTable extends Component {
                 {this.props.obj.Events[0].Tr1CW2}
               </p>
             </div>
+            </div>
+
+            <div className="col-md-6">
             <div className="cricket-score-middle">
               <h4>{this.props.obj.Snm}</h4>
               <p>
@@ -62,7 +67,9 @@ class DataTable extends Component {
               <p></p>
               <p>{this.props.obj.Events[0].ECo}</p>
             </div>
+            </div>
 
+            <div className="col-md-3">
             <div className="cricket-team2">
               <p className="team-name-color">
                 {this.props.obj.Events[0].T2[0].Nm}
@@ -77,6 +84,7 @@ class DataTable extends Component {
                 {this.props.obj.Events[0].Tr2C2}/
                 {this.props.obj.Events[0].Tr2CW2}
               </p>
+            </div>
             </div>
           </div>
         </div>

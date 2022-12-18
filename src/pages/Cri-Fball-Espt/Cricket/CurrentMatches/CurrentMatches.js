@@ -53,7 +53,7 @@ export default class CurrentMatches extends Component {
           });
         }
       })
-      .catch(function (error) {
+      .catch(function(error) {
         console.error(error);
       });
   }
@@ -130,123 +130,17 @@ export default class CurrentMatches extends Component {
                       {/* <div className="line"></div> */}
                     </div>
 
-                    {/* <div className="cricket-live-score">
-                      <div className="cricket-live-score-heading">
-                        <span>Live</span>
-                        <p></p>
-                      </div>
-                    </div> */}
-
                     <div className="wrapper-users">
-                      {/* <div className="container pt-200">
-                        <div className="row">
-                          <div className="col-12 col-md-4 offset-md-8">
-                            <form>
-                              <label>Search : </label>
-                              <input type="text" placeholder="Search"></input>
-                            </form>
+                      <div className="container">
+                        <div class="d-flex justify-content-center">
+                          <div class="spinner-border text-warning" role="status">
+                            <span class="visually-hidden">Loading...</span>
                           </div>
                         </div>
-                      </div> */}
-                      <br></br>
-                      <div className="container">
-                        {/* <table className="table table-striped table-dark">
-                          <thead className="thead-dark">
-                            <tr>
-                              <td>Date</td>
-                              <td>Match</td>
-                              <td>Team1</td>
-                              <td>Score</td>
-                              <td>Wicket</td>
-                              <td>Over</td>
-                              <td>Team2</td>
-                              <td>Score</td>
-                              <td>Wicket</td>
-                              <td>Over</td>
-                              <td>Tournaments</td>
-                              <td>Status</td>
-
-                              <td>Series</td>
-                            </tr>
-                          </thead>
-
-                        </table> */}
                         <div>{this.dataTable()}</div>
                       </div>
                       <br></br>
                     </div>
-
-                    {/* Each game row */}
-                    {/* <div className="row match-border">
-                    <div className="col-lg-3 col-md-3">
-                      <div className="live-match-left">
-                        <h5>ESL ANZ Championship</h5>
-                        <p>21/11/2022 07:00 UTC</p>
-                      </div>
-                    </div>
-                    <div className="col-lg-6 col-md-6">
-                      <div className="live-match-middle">
-                        <p>Kraken</p>
-                        <span>3.55</span>
-                        <p>vs.</p>
-                        <span>1.25</span>
-                        <p>Nut E</p>
-                      </div>
-                    </div>
-                    <div className="col-lg-3 col-md-3 ">
-                      <div className="live-match-right">
-                        <button>BET NOW</button>
-                      </div>
-                    </div>
-                  </div> */}
-
-                    {/* Each game row */}
-                    {/* <div className="row match-border">
-                    <div className="col-lg-3 col-md-3">
-                      <div className="live-match-left">
-                        <h5>ESL ANZ Championship</h5>
-                        <p>21/11/2022 07:00 UTC</p>
-                      </div>
-                    </div>
-                    <div className="col-lg-6 col-md-6">
-                      <div className="live-match-middle">
-                        <p>Kraken</p>
-                        <span>3.55</span>
-                        <p>vs.</p>
-                        <span>1.25</span>
-                        <p>Nut E</p>
-                      </div>
-                    </div>
-                    <div className="col-lg-3 col-md-3 ">
-                      <div className="live-match-right">
-                        <button>BET NOW</button>
-                      </div>
-                    </div>
-                  </div> */}
-
-                    {/* Each game row */}
-                    {/* <div className="row match-border">
-                    <div className="col-lg-3 col-md-3">
-                      <div className="live-match-left">
-                        <h5>ESL ANZ Championship</h5>
-                        <p>21/11/2022 07:00 UTC</p>
-                      </div>
-                    </div>
-                    <div className="col-lg-6 col-md-6">
-                      <div className="live-match-middle">
-                        <p>Kraken</p>
-                        <span>3.55</span>
-                        <p>vs.</p>
-                        <span>1.25</span>
-                        <p>Nut E</p>
-                      </div>
-                    </div>
-                    <div className="col-lg-3 col-md-3 ">
-                      <div className="live-match-right">
-                        <button>BET NOW</button>
-                      </div>
-                    </div>
-                  </div> */}
                   </div>
                 </div>
               </div>

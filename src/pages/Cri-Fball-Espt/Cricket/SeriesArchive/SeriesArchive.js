@@ -1,5 +1,5 @@
-import React, { Component } from "react";
 import axios from "axios";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import DataTable from "./DataTable";
 // import "../App.css";
@@ -207,95 +207,13 @@ export default class SeriesArchive extends Component {
                     </div>
 
                     <div className="wrapper-users">
-                      {/* <div className="container pt-200">
-                        <div className="row">
-                          <div className="col-12 col-md-4 offset-md-8">
-                            <form>
-                              <label>Search : </label>
-                              <input type="text" placeholder="Search"></input>
-                            </form>
-                          </div>
-                        </div>
-                      </div> */}
-                      <br></br>
+                      
                       <div className="container">
-                        
                         <div>{this.dataTable()}</div>
                       </div>
-                      <br></br>
+                      
                     </div>
-
-                    {/* Each game row */}
-                    {/* <div className="row match-border">
-                    <div className="col-lg-3 col-md-3">
-                      <div className="live-match-left">
-                        <h5>ESL ANZ Championship</h5>
-                        <p>21/11/2022 07:00 UTC</p>
-                      </div>
-                    </div>
-                    <div className="col-lg-6 col-md-6">
-                      <div className="live-match-middle">
-                        <p>Kraken</p>
-                        <span>3.55</span>
-                        <p>vs.</p>
-                        <span>1.25</span>
-                        <p>Nut E</p>
-                      </div>
-                    </div>
-                    <div className="col-lg-3 col-md-3 ">
-                      <div className="live-match-right">
-                        <button>BET NOW</button>
-                      </div>
-                    </div>
-                  </div> */}
-
-                    {/* Each game row */}
-                    {/* <div className="row match-border">
-                    <div className="col-lg-3 col-md-3">
-                      <div className="live-match-left">
-                        <h5>ESL ANZ Championship</h5>
-                        <p>21/11/2022 07:00 UTC</p>
-                      </div>
-                    </div>
-                    <div className="col-lg-6 col-md-6">
-                      <div className="live-match-middle">
-                        <p>Kraken</p>
-                        <span>3.55</span>
-                        <p>vs.</p>
-                        <span>1.25</span>
-                        <p>Nut E</p>
-                      </div>
-                    </div>
-                    <div className="col-lg-3 col-md-3 ">
-                      <div className="live-match-right">
-                        <button>BET NOW</button>
-                      </div>
-                    </div>
-                  </div> */}
-
-                    {/* Each game row */}
-                    {/* <div className="row match-border">
-                    <div className="col-lg-3 col-md-3">
-                      <div className="live-match-left">
-                        <h5>ESL ANZ Championship</h5>
-                        <p>21/11/2022 07:00 UTC</p>
-                      </div>
-                    </div>
-                    <div className="col-lg-6 col-md-6">
-                      <div className="live-match-middle">
-                        <p>Kraken</p>
-                        <span>3.55</span>
-                        <p>vs.</p>
-                        <span>1.25</span>
-                        <p>Nut E</p>
-                      </div>
-                    </div>
-                    <div className="col-lg-3 col-md-3 ">
-                      <div className="live-match-right">
-                        <button>BET NOW</button>
-                      </div>
-                    </div>
-                  </div> */}
+                    
                   </div>
                 </div>
               </div>
