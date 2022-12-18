@@ -16,6 +16,9 @@ function Teams() {
                     <Link to="/currentmatches">TODAY MATCHES</Link>
                   </li>
                   <li>
+                    <Link to="/seriesarchive">RESULTS</Link>
+                  </li>
+                  <li>
                     <Link to="/currentfutureseries">UPCOMING MATCHES</Link>
                   </li>
                   {/* <li>
@@ -23,9 +26,6 @@ function Teams() {
                   </li> */}
                   <li>
                     <Link to="/teams">Teams</Link>
-                  </li>
-                  <li>
-                    <Link to="/seriesarchive">RESULTS ARCHIVE</Link>
                   </li>
                 </ul>
               </div>
@@ -60,6 +60,7 @@ function Teams() {
                 <div className="col-md-12">
                   <div className="match-heading">
                     <h4>Cricket Teams</h4>
+                    <p>Hello</p>
                     <div className="line"></div>
                   </div>
 
