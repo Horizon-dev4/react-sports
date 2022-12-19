@@ -60,81 +60,10 @@ function Teams() {
                 <div className="col-md-12">
                   <div className="match-heading">
                     <h4>Cricket Teams</h4>
-                    <p>Hello</p>
                     <div className="line"></div>
                   </div>
 
-                  {/* Each game row */}
-                  {/* <div className="row match-border">
-                    <div className="col-lg-3 col-md-3">
-                      <div className="live-match-left">
-                        <h5>ESL ANZ Championship</h5>
-                        <p>21/11/2022 07:00 UTC</p>
-                      </div>
-                    </div>
-                    <div className="col-lg-6 col-md-6">
-                      <div className="live-match-middle">
-                        <p>Kraken</p>
-                        <span>3.55</span>
-                        <p>vs.</p>
-                        <span>1.25</span>
-                        <p>Nut E</p>
-                      </div>
-                    </div>
-                    <div className="col-lg-3 col-md-3 ">
-                      <div className="live-match-right">
-                        <button>BET NOW</button>
-                      </div>
-                    </div>
-                  </div> */}
-
-                  {/* Each game row */}
-                  {/* <div className="row match-border">
-                    <div className="col-lg-3 col-md-3">
-                      <div className="live-match-left">
-                        <h5>ESL ANZ Championship</h5>
-                        <p>21/11/2022 07:00 UTC</p>
-                      </div>
-                    </div>
-                    <div className="col-lg-6 col-md-6">
-                      <div className="live-match-middle">
-                        <p>Kraken</p>
-                        <span>3.55</span>
-                        <p>vs.</p>
-                        <span>1.25</span>
-                        <p>Nut E</p>
-                      </div>
-                    </div>
-                    <div className="col-lg-3 col-md-3 ">
-                      <div className="live-match-right">
-                        <button>BET NOW</button>
-                      </div>
-                    </div>
-                  </div> */}
-
-                  {/* Each game row */}
-                  {/* <div className="row match-border">
-                    <div className="col-lg-3 col-md-3">
-                      <div className="live-match-left">
-                        <h5>ESL ANZ Championship</h5>
-                        <p>21/11/2022 07:00 UTC</p>
-                      </div>
-                    </div>
-                    <div className="col-lg-6 col-md-6">
-                      <div className="live-match-middle">
-                        <p>Kraken</p>
-                        <span>3.55</span>
-                        <p>vs.</p>
-                        <span>1.25</span>
-                        <p>Nut E</p>
-                      </div>
-                    </div>
-                    <div className="col-lg-3 col-md-3 ">
-                      <div className="live-match-right">
-                        <button>BET NOW</button>
-                      </div>
-                    </div>
-                  </div> */}
+                  
                 </div>
               </div>
             </div>

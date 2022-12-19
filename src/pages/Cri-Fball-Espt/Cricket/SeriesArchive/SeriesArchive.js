@@ -11,67 +11,6 @@ export default class SeriesArchive extends Component {
   }
 
   componentDidMount() {
-    
-    // function formatDate(date) {
-    //   var d = new Date(date),
-    //     month = "" + (d.getMonth() + 1),
-    //     day = "" + d.getDate(),
-    //     year = d.getFullYear();
-
-    //   if (month.length < 2) month = "0" + month;
-    //   if (day.length < 2) day = "0" + day;
-
-    //   todayDate = [year, month, day].join("");
-    //   return todayDate;
-      
-    // }
-
-  //   for (let i = 0; i < 6; i++) {
-  //     // const today = new Date();
-  //     let nextDate = new Date();
-  //     nextDate.setDate(nextDate.getDate() + i);
-
-  //     let newDate = formatDate(nextDate);
-  //     console.log(newDate);
-
-  //     // setTimeout(() => {
-  //     //    console.log("this is the first message");
-  //     //  }, 5000);
-
-      
-  // }
-  
-  
-  // let currentDate = new Date().toISOString().slice(0, 10);
-  // console.log(currentDate);
-
-//   const tomorrow = () => {
-  
-//     // Creating the date instance
-//     let d = new Date();
-
-//     // Adding one date to the present date
-//     d.setDate(d.getDate() + 1);
-
-//     let year = String(d.getFullYear())
-//     let month = String(d.getMonth() + 1)
-//     let day = String(d.getDate())
-
-//     // Adding leading 0 if the day or month
-//     // is one digit value
-//     month = month.length == 1 ? 
-//         month.padStart('2', '0') : month;
-
-//     day = day.length == 1 ? 
-//         day.padStart('2', '0') : day;
-//     // Printing the present date
-//     console.log(`${year}-${month}-${day}`);
-//     return year.concat(month,day);
-// }
-
-// let d=tomorrow()
-
-// console.log(d)
 
   const dateOfXDay = (xDay = -1) => {
     // Get today's date
@@ -87,9 +26,6 @@ export default class SeriesArchive extends Component {
   let e = dateOfXDay();
   console.log(e);
 
-
-
-  
   const options = {
     method: "GET",
     url: "https://livescore6.p.rapidapi.com/matches/v2/list-by-date",
@@ -99,7 +35,7 @@ export default class SeriesArchive extends Component {
         "b6e89817d6msh36107de73277139p116779jsne307fb015e33",
       "x-rapidapi-host": "livescore6.p.rapidapi.com",
     },
-  };
+  }; 
 
   axios
     .request(options)
@@ -107,39 +43,24 @@ export default class SeriesArchive extends Component {
       this.setState({ usersCollection: response.data.Stages });
       // console.log(this.state.usersCollection);
       console.log(response.data);
-      for (const [key, value] of Object.entries(response.data)) {
-        const firstentry = value;
-        console.log("Stages", key);
-        // firstentry.forEach((p, i) => {
-        //   console.log("StartDate: ", p.Events[0].Esd);
-        //   console.log("EndDate :", p.Events[0].Ese);
-        //   console.log("Country :", p.Snm);
-        //   console.log("Tournaments :", p.Cnm);
-        //   console.log("Status :", p.Events[0].ECo);
-        // });
-      }
+      // for (const [key, value] of Object.entries(response.data)) {
+      //   const firstentry = value;
+      //   console.log("Stages", key);
+      //   // firstentry.forEach((p, i) => {
+      //   //   console.log("StartDate: ", p.Events[0].Esd);
+      //   //   console.log("EndDate :", p.Events[0].Ese);
+      //   //   console.log("Country :", p.Snm);
+      //   //   console.log("Tournaments :", p.Cnm);
+      //   //   console.log("Status :", p.Events[0].ECo);
+      //   // });
+      // }
     })
     .catch(function (error) {
       console.error(error);
     });
-
-  // setTimeout(newDate, 3000);
 }
 
-  // const options = {
-  //   method: "GET",
-  //   url: "https://livescore6.p.rapidapi.com/matches/v2/list-by-date",
-  //   params: { Category: "cricket", Date: {newDate}, Timezone: "-7" },
-  //   headers: {
-  //     "x-rapidapi-key": "b6e89817d6msh36107de73277139p116779jsne307fb015e33",
-  //     "x-rapidapi-host": "livescore6.p.rapidapi.com",
-  //   },
-  // };
-
   dataTable() {
-    // this.state.usersCollection.forEach((entry) => {
-    //   console.log(entry.Stages);
-    // });
     return this.state.usersCollection.map((data, i) => {
       return <DataTable obj={data} key={i} />;
     });
@@ -164,9 +85,6 @@ export default class SeriesArchive extends Component {
                     <li>
                       <Link to="/currentfutureseries">UPCOMING MATCHES</Link>
                     </li>
-                    {/* <li>
-                      <Link to="/matchesbyday">Matches By Day</Link>
-                    </li> */}
                     <li>
                       <Link to="/teams">Teams</Link>
                     </li>

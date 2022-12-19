@@ -32,26 +32,6 @@ export default class CurrentMatches extends Component {
         console.log(this.state.usersCollection);
         // console.log(this.state.matchData);
         console.log(response.data);
-        for (const [key, value] of Object.entries(response.data)) {
-          const firstentry = value;
-          console.log("Stages.Events", key);
-          firstentry.forEach((p, i) => {
-            console.log("date :", p.Esd);
-            console.log("match :", p.ErnInf);
-            console.log("team1 :", p.T1[0].Nm);
-            console.log("team2 :", p.T2[0].Nm);
-            console.log("Run1: ", p.Tr1C1);
-            console.log("Run2: ", p.Tr2C1);
-            console.log("Wicket1 :", p.Tr1CW1);
-            console.log("Wicket2 :", p.Tr2CW1);
-            console.log("Over1 :", p.Tr1CO1);
-            console.log("Over2 :", p.Tr2CO1);
-            console.log("Tournaments :", p.Stg.Cnm);
-            console.log("Status :", p.ECo);
-
-            // console.log("Seriess :", p.Events.ECo);
-          });
-        }
       })
       .catch(function(error) {
         console.error(error);
@@ -59,14 +39,10 @@ export default class CurrentMatches extends Component {
   }
 
   dataTable() {
-    // this.state.usersCollection.forEach((entry) => {
-    //   console.log(entry.Stages);
-    // });
     return this.state.usersCollection.map((data, i) => {
       return <DataTable obj={data} key={i} />;
     });
 
-    // return <DataTable obj={this.state.usersCollection} />;
   }
 
   render() {
@@ -88,9 +64,6 @@ export default class CurrentMatches extends Component {
                     <li>
                       <Link to="/currentfutureseries">UPCOMING MATCHES</Link>
                     </li>
-                    {/* <li>
-                      <Link to="/matchesbyday">Matches By Day</Link>
-                    </li> */}
                     <li>
                       <Link to="/teams">Teams</Link>
                     </li>
@@ -132,12 +105,15 @@ export default class CurrentMatches extends Component {
 
                     <div className="wrapper-users">
                       <div className="container">
+
+                        {}
                         <div class="d-flex justify-content-center">
                           <div class="spinner-border text-warning" role="status">
                             <span class="visually-hidden">Loading...</span>
                           </div>
                         </div>
                         <div>{this.dataTable()}</div>
+                        
                       </div>
                       <br></br>
                     </div>
