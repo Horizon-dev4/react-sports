@@ -1336,6 +1336,11 @@ textarea:focus {
   border-radius: 6px;
 }
 
+.cricket-live-score a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .cricket-live-score-details {
   display: flex;
   justify-content: space-between;
