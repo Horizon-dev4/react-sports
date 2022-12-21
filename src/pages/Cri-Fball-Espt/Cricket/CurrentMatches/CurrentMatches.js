@@ -34,41 +34,17 @@ export default class CurrentMatches extends Component {
         console.log(this.state.usersCollection);
         // console.log(this.state.matchData);
         console.log(response.data);
-        for (const [key, value] of Object.entries(response.data)) {
-          const firstentry = value;
-          console.log("Stages.Events", key);
-          firstentry.forEach((p, i) => {
-            console.log("date :", p.Esd);
-            console.log("match :", p.ErnInf);
-            console.log("team1 :", p.T1[0].Nm);
-            console.log("team2 :", p.T2[0].Nm);
-            console.log("Run1: ", p.Tr1C1);
-            console.log("Run2: ", p.Tr2C1);
-            console.log("Wicket1 :", p.Tr1CW1);
-            console.log("Wicket2 :", p.Tr2CW1);
-            console.log("Over1 :", p.Tr1CO1);
-            console.log("Over2 :", p.Tr2CO1);
-            console.log("Tournaments :", p.Stg.Cnm);
-            console.log("Status :", p.ECo);
-
-            // console.log("Seriess :", p.Events.ECo);
-          });
-        }
       })
-      .catch(function (error) {
+      .catch(function(error) {
         console.error(error);
       });
   }
 
   dataTable() {
-    // this.state.usersCollection.forEach((entry) => {
-    //   console.log(entry.Stages);
-    // });
     return this.state.usersCollection.map((data, i) => {
       return <DataTable obj={data} key={i} />;
     });
 
-    // return <DataTable obj={this.state.usersCollection} />;
   }
 
 
@@ -93,9 +69,6 @@ export default class CurrentMatches extends Component {
                     <li>
                       <Link to="/currentfutureseries">UPCOMING MATCHES</Link>
                     </li>
-                    {/* <li>
-                      <Link to="/matchesbyday">Matches By Day</Link>
-                    </li> */}
                     <li>
                       <Link to="/teams">Teams</Link>
                     </li>
@@ -135,123 +108,20 @@ export default class CurrentMatches extends Component {
                       {/* <div className="line"></div> */}
                     </div>
 
-                    {/* <div className="cricket-live-score">
-                      <div className="cricket-live-score-heading">
-                        <span>Live</span>
-                        <p></p>
-                      </div>
-                    </div> */}
-
                     <div className="wrapper-users">
-                      {/* <div className="container pt-200">
-                        <div className="row">
-                          <div className="col-12 col-md-4 offset-md-8">
-                            <form>
-                              <label>Search : </label>
-                              <input type="text" placeholder="Search"></input>
-                            </form>
-                          </div>
-                        </div>
-                      </div> */}
-                      <br></br>
                       <div className="container">
-                        {/* <table className="table table-striped table-dark">
-                          <thead className="thead-dark">
-                            <tr>
-                              <td>Date</td>
-                              <td>Match</td>
-                              <td>Team1</td>
-                              <td>Score</td>
-                              <td>Wicket</td>
-                              <td>Over</td>
-                              <td>Team2</td>
-                              <td>Score</td>
-                              <td>Wicket</td>
-                              <td>Over</td>
-                              <td>Tournaments</td>
-                              <td>Status</td>
 
-                              <td>Series</td>
-                            </tr>
-                          </thead>
-
-                        </table> */}
+                        {}
+                        {/* <div class="d-flex justify-content-center">
+                          <div class="spinner-border text-warning" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                          </div>
+                        </div> */}
                         <div>{this.dataTable()}</div>
+                        
                       </div>
                       <br></br>
                     </div>
-
-                    {/* Each game row */}
-                    {/* <div className="row match-border">
-                    <div className="col-lg-3 col-md-3">
-                      <div className="live-match-left">
-                        <h5>ESL ANZ Championship</h5>
-                        <p>21/11/2022 07:00 UTC</p>
-                      </div>
-                    </div>
-                    <div className="col-lg-6 col-md-6">
-                      <div className="live-match-middle">
-                        <p>Kraken</p>
-                        <span>3.55</span>
-                        <p>vs.</p>
-                        <span>1.25</span>
-                        <p>Nut E</p>
-                      </div>
-                    </div>
-                    <div className="col-lg-3 col-md-3 ">
-                      <div className="live-match-right">
-                        <button>BET NOW</button>
-                      </div>
-                    </div>
-                  </div> */}
-
-                    {/* Each game row */}
-                    {/* <div className="row match-border">
-                    <div className="col-lg-3 col-md-3">
-                      <div className="live-match-left">
-                        <h5>ESL ANZ Championship</h5>
-                        <p>21/11/2022 07:00 UTC</p>
-                      </div>
-                    </div>
-                    <div className="col-lg-6 col-md-6">
-                      <div className="live-match-middle">
-                        <p>Kraken</p>
-                        <span>3.55</span>
-                        <p>vs.</p>
-                        <span>1.25</span>
-                        <p>Nut E</p>
-                      </div>
-                    </div>
-                    <div className="col-lg-3 col-md-3 ">
-                      <div className="live-match-right">
-                        <button>BET NOW</button>
-                      </div>
-                    </div>
-                  </div> */}
-
-                    {/* Each game row */}
-                    {/* <div className="row match-border">
-                    <div className="col-lg-3 col-md-3">
-                      <div className="live-match-left">
-                        <h5>ESL ANZ Championship</h5>
-                        <p>21/11/2022 07:00 UTC</p>
-                      </div>
-                    </div>
-                    <div className="col-lg-6 col-md-6">
-                      <div className="live-match-middle">
-                        <p>Kraken</p>
-                        <span>3.55</span>
-                        <p>vs.</p>
-                        <span>1.25</span>
-                        <p>Nut E</p>
-                      </div>
-                    </div>
-                    <div className="col-lg-3 col-md-3 ">
-                      <div className="live-match-right">
-                        <button>BET NOW</button>
-                      </div>
-                    </div>
-                  </div> */}
                   </div>
                 </div>
               </div>

@@ -1335,6 +1335,12 @@ textarea:focus {
   padding: 14px 10px;
   border-radius: 6px;
 }
+
+.cricket-live-score a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .cricket-live-score-details {
   display: flex;
   justify-content: space-between;
@@ -1344,7 +1350,7 @@ textarea:focus {
   color: #fc0;
 }
 
-.cricket-live-score-details .team-name-color {
+.team-name-color {
   color: #9cbee7;
   font-family: roboto;
   font-weight: 600;
