@@ -30,8 +30,7 @@ class DataTable extends Component {
                     {this.props.obj.Events[0].Tr1CW2}
                   </p>
                 </div>
-              </div>
-//>>>>>>> master
+              </div> 
 
               <div className="col-md-6">
                 <div className="cricket-score-middle">
@@ -70,8 +69,7 @@ class DataTable extends Component {
                   <p>{this.props.obj.Events[0].ECo}</p>
                 </div>
               </div>
-            
-//=========
+           
               <div className="col-md-3">
                 <div className="cricket-team2">
                   <p className="team-name-color">
@@ -89,7 +87,6 @@ class DataTable extends Component {
                   </p>
                 </div>
               </div>
-//>>>>>>> master
             </div>
           </Link>
         </div>

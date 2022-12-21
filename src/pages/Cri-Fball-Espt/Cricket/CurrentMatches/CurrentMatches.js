@@ -22,8 +22,6 @@ export default class CurrentMatches extends Component {
       },
     };
    
-    
-
     axios
       .request(options)
       .then((response) => {
@@ -46,9 +44,6 @@ export default class CurrentMatches extends Component {
     });
 
   }
-
-
-  
 
   render() {
     return (
