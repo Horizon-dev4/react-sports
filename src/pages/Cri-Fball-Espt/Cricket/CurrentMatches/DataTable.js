@@ -6,8 +6,7 @@ class DataTable extends Component {
     return (
       <tr>
         <div className="cricket-live-score"> 
-                  
-//=======
+          
           <Link to="/prediction">
             <div className="row">
               <div className="col-md-3">
