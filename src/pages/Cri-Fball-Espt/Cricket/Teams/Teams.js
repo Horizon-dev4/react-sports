@@ -61,6 +61,7 @@ function Teams() {
                   <div className="match-heading">
                     <h4>Cricket Teams</h4>
                     <p>Hello</p>
+                    <p>Cricket team name and history here</p>
                     <div className="line"></div>
                   </div>
 
