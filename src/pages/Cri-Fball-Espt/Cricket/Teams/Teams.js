@@ -60,6 +60,7 @@ function Teams() {
                 <div className="col-md-12">
                   <div className="match-heading">
                     <h4>Cricket Teams</h4>
+//>>>>>>> master
                     <div className="line"></div>
                   </div>
 

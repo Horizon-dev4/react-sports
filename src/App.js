@@ -11,7 +11,6 @@ import CurrentFutureSeries from './pages/Cri-Fball-Espt/Cricket/CurrentFutureSer
 import CurrentMatches from './pages/Cri-Fball-Espt/Cricket/CurrentMatches/CurrentMatches';
 import SeriesArchive from './pages/Cri-Fball-Espt/Cricket/SeriesArchive/SeriesArchive';
 import Teams from './pages/Cri-Fball-Espt/Cricket/Teams/Teams';
-
 import CallOfDuty from './pages/Cri-Fball-Espt/Esports/CallOfDuty/CallOfDuty';
 import CsGo from './pages/Cri-Fball-Espt/Esports/CsGo/CsGo';
 import Dota2 from './pages/Cri-Fball-Espt/Esports/Dota2/Dota2';
@@ -62,6 +61,8 @@ function App() {
         <Route path="/currentmatches" element={ <CurrentMatches />} />
         <Route path="/seriesarchive" element={ <SeriesArchive /> } />
         <Route path="/teams" element={ <Teams /> } />
+
+
 
       </Routes>
       <Footer />

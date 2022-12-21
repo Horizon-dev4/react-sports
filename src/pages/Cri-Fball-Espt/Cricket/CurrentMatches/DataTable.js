@@ -5,7 +5,9 @@ class DataTable extends Component {
   render() {
     return (
       <tr>
-        <div className="cricket-live-score">
+        <div className="cricket-live-score"> 
+                  
+//=======
           <Link to="/prediction">
             <div className="row">
               <div className="col-md-3">
@@ -29,6 +31,7 @@ class DataTable extends Component {
                   </p>
                 </div>
               </div>
+//>>>>>>> master
 
               <div className="col-md-6">
                 <div className="cricket-score-middle">
@@ -67,7 +70,8 @@ class DataTable extends Component {
                   <p>{this.props.obj.Events[0].ECo}</p>
                 </div>
               </div>
-
+            
+//=========
               <div className="col-md-3">
                 <div className="cricket-team2">
                   <p className="team-name-color">
@@ -85,23 +89,10 @@ class DataTable extends Component {
                   </p>
                 </div>
               </div>
+//>>>>>>> master
             </div>
           </Link>
         </div>
-        {/* <td>{this.props.obj.Esd}</td>
-        <td>{this.props.obj.ErnInf}</td>
-        <td>{this.props.obj.T1[0].Nm}</td>
-        <td>{this.props.obj.Tr1C1}</td>
-        <td>{this.props.obj.Tr1CW1}</td>
-        <td>{this.props.obj.Tr1CO1}</td>
-        <td>{this.props.obj.T2[0].Nm}</td>
-        <td>{this.props.obj.Tr2C1}</td>
-        <td>{this.props.obj.Tr2CW1}</td>
-        <td>{this.props.obj.Tr2CO1}</td>
-        <td>{this.props.obj.Stg.Cnm}</td>
-        <td>{this.props.obj.ECo}</td>
-        {/* <td>{this.props.obj.Events.ECo}</td> */}
-        {/* <td>{this.props.obj.Scd}</td> */}
       </tr>
     );
   }
