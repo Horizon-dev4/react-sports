@@ -9,7 +9,10 @@ class DataTable extends Component {
             <div className="cricket-team1">
               <p className="team-name-color">
                 {this.props.obj.Events[0].T1[0].Nm}
+
+
               </p>
+              
               <p className="team-score-color">
                 {"(" +
                   this.props.obj.Events[0].Tr1CO1 +
@@ -23,6 +26,7 @@ class DataTable extends Component {
                 ({this.props.obj.Events[0].Tr1CO2}){" "}
                 {this.props.obj.Events[0].Tr1C2}/
                 {this.props.obj.Events[0].Tr1CW2}
+                
               </p>
             </div>
             <div className="cricket-score-middle">
@@ -66,6 +70,7 @@ class DataTable extends Component {
             <div className="cricket-team2">
               <p className="team-name-color">
                 {this.props.obj.Events[0].T2[0].Nm}
+                
               </p>
               <p className="team-score-color">
                 ({this.props.obj.Events[0].Tr2CO1}){" "}
