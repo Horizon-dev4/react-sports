@@ -1,5 +1,5 @@
-import React, { Component } from "react";
 import axios from "axios";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import DataTable from "./DataTable";
 // import "../App.css";
@@ -72,9 +72,6 @@ export default class currentfutureseries extends Component {
 let d=tomorrow()
 console.log(d)
 
-
-
-  
   const options = {
     method: "GET",
     url: "https://livescore6.p.rapidapi.com/matches/v2/list-by-date",
@@ -92,39 +89,24 @@ console.log(d)
       this.setState({ usersCollection: response.data.Stages });
       // console.log(this.state.usersCollection);
       console.log(response.data);
-      for (const [key, value] of Object.entries(response.data)) {
-        const firstentry = value;
-        console.log("Stages", key);
-        // firstentry.forEach((p, i) => {
-        //   console.log("StartDate: ", p.Events[0].Esd);
-        //   console.log("EndDate :", p.Events[0].Ese);
-        //   console.log("Country :", p.Snm);
-        //   console.log("Tournaments :", p.Cnm);
-        //   console.log("Status :", p.Events[0].ECo);
-        // });
-      }
+      // for (const [key, value] of Object.entries(response.data)) {
+      //   const firstentry = value;
+      //   console.log("Stages", key);
+      //   // firstentry.forEach((p, i) => {
+      //   //   console.log("StartDate: ", p.Events[0].Esd);
+      //   //   console.log("EndDate :", p.Events[0].Ese);
+      //   //   console.log("Country :", p.Snm);
+      //   //   console.log("Tournaments :", p.Cnm);
+      //   //   console.log("Status :", p.Events[0].ECo);
+      //   // });
+      // }
     })
     .catch(function (error) {
       console.error(error);
     });
-
-  // setTimeout(newDate, 3000);
 }
 
-  // const options = {
-  //   method: "GET",
-  //   url: "https://livescore6.p.rapidapi.com/matches/v2/list-by-date",
-  //   params: { Category: "cricket", Date: {newDate}, Timezone: "-7" },
-  //   headers: {
-  //     "x-rapidapi-key": "b6e89817d6msh36107de73277139p116779jsne307fb015e33",
-  //     "x-rapidapi-host": "livescore6.p.rapidapi.com",
-  //   },
-  // };
-
   dataTable() {
-    // this.state.usersCollection.forEach((entry) => {
-    //   console.log(entry.Stages);
-    // });
     return this.state.usersCollection.map((data, i) => {
       return <DataTable obj={data} key={i} />;
     });
@@ -149,9 +131,6 @@ console.log(d)
                     <li>
                       <Link to="/currentfutureseries">UPCOMING MATCHES</Link>
                     </li>
-                    {/* <li>
-                      <Link to="/matchesbyday">Matches By Day</Link>
-                    </li> */}
                     <li>
                       <Link to="/teams">Teams</Link>
                     </li>
@@ -193,107 +172,13 @@ console.log(d)
                     </div>
 
                     <div className="wrapper-users">
-                      {/* <div className="container pt-200">
-                        <div className="row">
-                          <div className="col-12 col-md-4 offset-md-8">
-                            <form>
-                              <label>Search : </label>
-                              <input type="text" placeholder="Search"></input>
-                            </form>
-                          </div>
-                        </div>
-                      </div> */}
-                      <br></br>
+
                       <div className="container">
-                        {/* <table className="table table-striped table-dark">
-                          <thead className="thead-dark">
-                            <tr>
-                              <td>Startdate</td>
-                              <td>Country</td>
-                              <td>Tournaments</td>
-                              <td>Status</td>
-                              <td>match</td>
-                            </tr>
-                          </thead>
-                          <tbody>{this.dataTable()}</tbody>
-                        </table> */}
                         <div>{this.dataTable()}</div>
                       </div>
-
+                      
                       <br></br>
                     </div>
-
-                    {/* Each game row */}
-                    {/* <div className="row match-border">
-                    <div className="col-lg-3 col-md-3">
-                      <div className="live-match-left">
-                        <h5>ESL ANZ Championship</h5>
-                        <p>21/11/2022 07:00 UTC</p>
-                      </div>
-                    </div>
-                    <div className="col-lg-6 col-md-6">
-                      <div className="live-match-middle">
-                        <p>Kraken</p>
-                        <span>3.55</span>
-                        <p>vs.</p>
-                        <span>1.25</span>
-                        <p>Nut E</p>
-                      </div>
-                    </div>
-                    <div className="col-lg-3 col-md-3 ">
-                      <div className="live-match-right">
-                        <button>BET NOW</button>
-                      </div>
-                    </div>
-                  </div> */}
-
-                    {/* Each game row */}
-                    {/* <div className="row match-border">
-                    <div className="col-lg-3 col-md-3">
-                      <div className="live-match-left">
-                        <h5>ESL ANZ Championship</h5>
-                        <p>21/11/2022 07:00 UTC</p>
-                      </div>
-                    </div>
-                    <div className="col-lg-6 col-md-6">
-                      <div className="live-match-middle">
-                        <p>Kraken</p>
-                        <span>3.55</span>
-                        <p>vs.</p>
-                        <span>1.25</span>
-                        <p>Nut E</p>
-                      </div>
-                    </div>
-                    <div className="col-lg-3 col-md-3 ">
-                      <div className="live-match-right">
-                        <button>BET NOW</button>
-                      </div>
-                    </div>
-                  </div> */}
-
-                    {/* Each game row */}
-                    {/* <div className="row match-border">
-                    <div className="col-lg-3 col-md-3">
-                      <div className="live-match-left">
-                        <h5>ESL ANZ Championship</h5>
-                        <p>21/11/2022 07:00 UTC</p>
-                      </div>
-                    </div>
-                    <div className="col-lg-6 col-md-6">
-                      <div className="live-match-middle">
-                        <p>Kraken</p>
-                        <span>3.55</span>
-                        <p>vs.</p>
-                        <span>1.25</span>
-                        <p>Nut E</p>
-                      </div>
-                    </div>
-                    <div className="col-lg-3 col-md-3 ">
-                      <div className="live-match-right">
-                        <button>BET NOW</button>
-                      </div>
-                    </div>
-                  </div> */}
                   </div>
                 </div>
               </div>
