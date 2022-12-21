@@ -9,6 +9,7 @@ import Contact from './pages/Contact';
 import Cricket from './pages/Cri-Fball-Espt/Cricket/Cricket';
 import CurrentFutureSeries from './pages/Cri-Fball-Espt/Cricket/CurrentFutureSeries/CurrentFutureSeries';
 import CurrentMatches from './pages/Cri-Fball-Espt/Cricket/CurrentMatches/CurrentMatches';
+import ScorePrediction from './pages/Cri-Fball-Espt/Cricket/ScoreAndPrediction/ScorePrediction';
 import SeriesArchive from './pages/Cri-Fball-Espt/Cricket/SeriesArchive/SeriesArchive';
 import Teams from './pages/Cri-Fball-Espt/Cricket/Teams/Teams';
 import CallOfDuty from './pages/Cri-Fball-Espt/Esports/CallOfDuty/CallOfDuty';
@@ -60,7 +61,9 @@ function App() {
         <Route path="/currentfutureseries" element={ <CurrentFutureSeries />} />
         <Route path="/currentmatches" element={ <CurrentMatches />} />
         <Route path="/seriesarchive" element={ <SeriesArchive /> } />
+        <Route path="/scoreprediction" element={ <ScorePrediction /> } />
         <Route path="/teams" element={ <Teams /> } />
+
 
 
 
