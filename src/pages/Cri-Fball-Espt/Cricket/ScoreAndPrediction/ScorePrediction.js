@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import DataTable from "./DataTable";
 
-export default class ScorePrediction extends Component {
+export default class CurrentMatches extends Component {
   constructor(props) {
     super(props);
     this.state = { usersCollection: [] };
@@ -14,24 +14,26 @@ export default class ScorePrediction extends Component {
   componentDidMount() {
     const options = {
       method: "GET",
-      url: "https://livescore6.p.rapidapi.com/matches/v2/list-live",
-      params: { Category: "cricket", Timezone: "6" },
+      url: "https://livescore6.p.rapidapi.com/matches/v2/get-innings",
+      params: {Eid: '836829', Category: 'cricket'},
       headers: {
         "x-rapidapi-key": "b6e89817d6msh36107de73277139p116779jsne307fb015e33",
         "x-rapidapi-host": "livescore6.p.rapidapi.com",
       },
     };
-   
+
     axios
       .request(options)
       .then((response) => {
         // this.setState({ usersCollection: response.data });
-        this.setState({ usersCollection: response.data.Stages });
+        this.setState({ usersCollection: response.data.SDInn});
         // this.setState({ matchData: response.data.Stages.Events });
-
-        console.log(this.state.usersCollection);
+        console.log(response.data.SDInn);
+        console.log(this.state.usersCollection.SDInn);
         // console.log(this.state.matchData);
-        console.log(response.data);
+        // console.log(response.data.SDInn);
+
+        
       })
       .catch(function(error) {
         console.error(error);
@@ -81,13 +83,13 @@ export default class ScorePrediction extends Component {
                   <h6 className="title">Tournaments</h6>
                   <ul className="tournament-items-list">
                     <li className="tournament-item">
-                      <a href="javascript:void(0)"> FIFA World Cup 2022 </a>
+                      <a href="#"> International </a>
                     </li>
                     <li className="tournament-item">
-                      <a href="javascript:void(0)"> IEM Clogne 2022 </a>
+                      <a href="#"> League </a>
                     </li>
                     <li className="tournament-item">
-                      <a href="javascript:void(0)"> BAN vs WES Series </a>
+                      <a href="#"> Domestic </a>
                     </li>
                   </ul>
                 </div>
@@ -99,7 +101,7 @@ export default class ScorePrediction extends Component {
                 <div className="row">
                   <div className="col-md-12">
                     <div className="match-heading">
-                      <h4>Cricket Schedule</h4>
+                      <h4>Cricket Scored Card</h4>
                       {/* <div className="line"></div> */}
                     </div>
 

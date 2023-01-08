@@ -41,13 +41,13 @@ function Teams() {
                 <h6 className="title">Tournaments</h6>
                 <ul className="tournament-items-list">
                   <li className="tournament-item">
-                    <a href="javascript:void(0)"> FIFA World Cup 2022 </a>
+                    <a href="#"> International </a>
                   </li>
                   <li className="tournament-item">
-                    <a href="javascript:void(0)"> IEM Clogne 2022 </a>
+                    <a href="#"> League </a>
                   </li>
                   <li className="tournament-item">
-                    <a href="javascript:void(0)"> BAN vs WES Series </a>
+                    <a href="#"> Domestic </a>
                   </li>
                 </ul>
               </div>
@@ -62,8 +62,6 @@ function Teams() {
                     <h4>Cricket Teams</h4>
                     <div className="line"></div>
                   </div>
-
-                  
                 </div>
               </div>
             </div>

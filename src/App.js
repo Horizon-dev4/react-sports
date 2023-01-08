@@ -9,6 +9,7 @@ import Contact from './pages/Contact';
 import Cricket from './pages/Cri-Fball-Espt/Cricket/Cricket';
 import CurrentFutureSeries from './pages/Cri-Fball-Espt/Cricket/CurrentFutureSeries/CurrentFutureSeries';
 import CurrentMatches from './pages/Cri-Fball-Espt/Cricket/CurrentMatches/CurrentMatches';
+import MyComponent from './pages/Cri-Fball-Espt/Cricket/ScoreAndPrediction/MyComponent';
 import ScorePrediction from './pages/Cri-Fball-Espt/Cricket/ScoreAndPrediction/ScorePrediction';
 import SeriesArchive from './pages/Cri-Fball-Espt/Cricket/SeriesArchive/SeriesArchive';
 import Teams from './pages/Cri-Fball-Espt/Cricket/Teams/Teams';
@@ -30,6 +31,7 @@ import Results from './pages/Results';
 import First from './pages/tournaments/First/First';
 import Second from './pages/tournaments/Second/Second';
 import Third from './pages/tournaments/Third/Third';
+
 
 function App() {
   return (
@@ -63,10 +65,8 @@ function App() {
         <Route path="/seriesarchive" element={ <SeriesArchive /> } />
         <Route path="/scoreprediction" element={ <ScorePrediction /> } />
         <Route path="/teams" element={ <Teams /> } />
-
-
-
-
+        <Route path="/mycomponent" element={ <MyComponent /> } />
+        
       </Routes>
       <Footer />
     </BrowserRouter>

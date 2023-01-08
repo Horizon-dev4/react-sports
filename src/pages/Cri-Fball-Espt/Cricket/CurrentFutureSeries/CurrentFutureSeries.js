@@ -11,7 +11,6 @@ export default class currentfutureseries extends Component {
   }
 
   componentDidMount() {
-    
     // function formatDate(date) {
     //   var d = new Date(date),
     //     month = "" + (d.getMonth() + 1),
@@ -23,88 +22,82 @@ export default class currentfutureseries extends Component {
 
     //   todayDate = [year, month, day].join("");
     //   return todayDate;
-      
+
     // }
 
-  //   for (let i = 0; i < 6; i++) {
-  //     // const today = new Date();
-  //     let nextDate = new Date();
-  //     nextDate.setDate(nextDate.getDate() + i);
+    //   for (let i = 0; i < 6; i++) {
+    //     // const today = new Date();
+    //     let nextDate = new Date();
+    //     nextDate.setDate(nextDate.getDate() + i);
 
-  //     let newDate = formatDate(nextDate);
-  //     console.log(newDate);
+    //     let newDate = formatDate(nextDate);
+    //     console.log(newDate);
 
-  //     // setTimeout(() => {
-  //     //    console.log("this is the first message");
-  //     //  }, 5000);
+    //     // setTimeout(() => {
+    //     //    console.log("this is the first message");
+    //     //  }, 5000);
 
-      
-  // }
-  
-  
-  // let currentDate = new Date().toISOString().slice(0, 10);
-  // console.log(currentDate);
+    // }
 
-  const tomorrow = () => {
-  
-    // Creating the date instance
-    let d = new Date();
+    // let currentDate = new Date().toISOString().slice(0, 10);
+    // console.log(currentDate);
 
-    // Adding one date to the present date
-    d.setDate(d.getDate() + 1);
+    const tomorrow = () => {
+      // Creating the date instance
+      let d = new Date();
 
-    let year = String(d.getFullYear())
-    let month = String(d.getMonth() + 1)
-    let day = String(d.getDate())
+      // Adding one date to the present date
+      d.setDate(d.getDate() + 1);
 
-    // Adding leading 0 if the day or month
-    // is one digit value
-    month = month.length == 1 ? 
-        month.padStart('2', '0') : month;
+      let year = String(d.getFullYear());
+      let month = String(d.getMonth() + 1);
+      let day = String(d.getDate());
 
-    day = day.length == 1 ? 
-        day.padStart('2', '0') : day;
-    // Printing the present date
-    console.log(`${year}-${month}-${day}`);
-    return year.concat(month,day);
-}
+      // Adding leading 0 if the day or month
+      // is one digit value
+      month = month.length == 1 ? month.padStart("2", "0") : month;
 
-let d=tomorrow()
-console.log(d)
+      day = day.length == 1 ? day.padStart("2", "0") : day;
+      // Printing the present date
+      console.log(`${year}-${month}-${day}`);
+      return year.concat(month, day);
+    };
 
-  const options = {
-    method: "GET",
-    url: "https://livescore6.p.rapidapi.com/matches/v2/list-by-date",
-    params: { Category: "cricket", Date: d, Timezone: "6" },
-    headers: {
-      "x-rapidapi-key":
-        "b6e89817d6msh36107de73277139p116779jsne307fb015e33",
-      "x-rapidapi-host": "livescore6.p.rapidapi.com",
-    },
-  };
+    let d = tomorrow();
+    console.log(d);
 
-  axios
-    .request(options)
-    .then((response) => {
-      this.setState({ usersCollection: response.data.Stages });
-      // console.log(this.state.usersCollection);
-      console.log(response.data);
-      // for (const [key, value] of Object.entries(response.data)) {
-      //   const firstentry = value;
-      //   console.log("Stages", key);
-      //   // firstentry.forEach((p, i) => {
-      //   //   console.log("StartDate: ", p.Events[0].Esd);
-      //   //   console.log("EndDate :", p.Events[0].Ese);
-      //   //   console.log("Country :", p.Snm);
-      //   //   console.log("Tournaments :", p.Cnm);
-      //   //   console.log("Status :", p.Events[0].ECo);
-      //   // });
-      // }
-    })
-    .catch(function (error) {
-      console.error(error);
-    });
-}
+    const options = {
+      method: "GET",
+      url: "https://livescore6.p.rapidapi.com/matches/v2/list-by-date",
+      params: { Category: "cricket", Date: d, Timezone: "6" },
+      headers: {
+        "x-rapidapi-key": "b6e89817d6msh36107de73277139p116779jsne307fb015e33",
+        "x-rapidapi-host": "livescore6.p.rapidapi.com",
+      },
+    };
+
+    axios
+      .request(options)
+      .then((response) => {
+        this.setState({ usersCollection: response.data.Stages });
+        // console.log(this.state.usersCollection);
+        console.log(response.data);
+        // for (const [key, value] of Object.entries(response.data)) {
+        //   const firstentry = value;
+        //   console.log("Stages", key);
+        //   // firstentry.forEach((p, i) => {
+        //   //   console.log("StartDate: ", p.Events[0].Esd);
+        //   //   console.log("EndDate :", p.Events[0].Ese);
+        //   //   console.log("Country :", p.Snm);
+        //   //   console.log("Tournaments :", p.Cnm);
+        //   //   console.log("Status :", p.Events[0].ECo);
+        //   // });
+        // }
+      })
+      .catch(function(error) {
+        console.error(error);
+      });
+  }
 
   dataTable() {
     return this.state.usersCollection.map((data, i) => {
@@ -134,7 +127,6 @@ console.log(d)
                     <li>
                       <Link to="/teams">Teams</Link>
                     </li>
-                    
                   </ul>
                 </div>
               </div>
@@ -149,13 +141,13 @@ console.log(d)
                   <h6 className="title">Tournaments</h6>
                   <ul className="tournament-items-list">
                     <li className="tournament-item">
-                      <a href="javascript:void(0)"> FIFA World Cup 2022 </a>
+                      <a href="#"> International </a>
                     </li>
                     <li className="tournament-item">
-                      <a href="javascript:void(0)"> IEM Clogne 2022 </a>
+                      <a href="#"> League </a>
                     </li>
                     <li className="tournament-item">
-                      <a href="javascript:void(0)"> BAN vs WES Series </a>
+                      <a href="#"> Domestic </a>
                     </li>
                   </ul>
                 </div>
@@ -172,11 +164,10 @@ console.log(d)
                     </div>
 
                     <div className="wrapper-users">
-
                       <div className="container">
                         <div>{this.dataTable()}</div>
                       </div>
-                      
+
                       <br></br>
                     </div>
                   </div>

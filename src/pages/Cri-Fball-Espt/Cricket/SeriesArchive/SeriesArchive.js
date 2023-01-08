@@ -11,54 +11,55 @@ export default class SeriesArchive extends Component {
   }
 
   componentDidMount() {
+    const dateOfXDay = (xDay = -1) => {
+      // Get today's date
+      let today = new Date();
+      // Change the date by adding 1 to it (today + 1 = tomorrow)
+      today.setDate(today.getDate() + xDay);
+      // return yyyy-mm-dd format
+      let x = today
+        .toISOString()
+        .split("T")[0]
+        .split("-");
+      return x[0] + x[1] + x[2];
+      // return today.toISOString();
+    };
 
-  const dateOfXDay = (xDay = -1) => {
-    // Get today's date
-    let today = new Date();
-    // Change the date by adding 1 to it (today + 1 = tomorrow)
-    today.setDate(today.getDate() + xDay);
-    // return yyyy-mm-dd format
-    let  x = today.toISOString().split('T')[0].split('-')
-    return x[0]+x[1]+x[2];
-    // return today.toISOString();
-  };
+    let e = dateOfXDay();
+    console.log(e);
 
-  let e = dateOfXDay();
-  console.log(e);
+    const options = {
+      method: "GET",
+      url: "https://livescore6.p.rapidapi.com/matches/v2/list-by-date",
+      params: { Category: "cricket", Date: e, Timezone: "6" },
+      headers: {
+        "x-rapidapi-key": "b6e89817d6msh36107de73277139p116779jsne307fb015e33",
+        "x-rapidapi-host": "livescore6.p.rapidapi.com",
+      },
+    };
 
-  const options = {
-    method: "GET",
-    url: "https://livescore6.p.rapidapi.com/matches/v2/list-by-date",
-    params: { Category: "cricket", Date: e, Timezone: "6" },
-    headers: {
-      "x-rapidapi-key":
-        "b6e89817d6msh36107de73277139p116779jsne307fb015e33",
-      "x-rapidapi-host": "livescore6.p.rapidapi.com",
-    },
-  }; 
-
-  axios
-    .request(options)
-    .then((response) => {
-      this.setState({ usersCollection: response.data.Stages });
-      // console.log(this.state.usersCollection);
-      console.log(response.data);
-      // for (const [key, value] of Object.entries(response.data)) {
-      //   const firstentry = value;
-      //   console.log("Stages", key);
-      //   // firstentry.forEach((p, i) => {
-      //   //   console.log("StartDate: ", p.Events[0].Esd);
-      //   //   console.log("EndDate :", p.Events[0].Ese);
-      //   //   console.log("Country :", p.Snm);
-      //   //   console.log("Tournaments :", p.Cnm);
-      //   //   console.log("Status :", p.Events[0].ECo);
-      //   // });
-      // }
-    })
-    .catch(function (error) {
-      console.error(error);
-    });
-}
+    axios
+      .request(options)
+      .then((response) => {
+        this.setState({ usersCollection: response.data.Stages });
+        // console.log(this.state.usersCollection);
+        console.log(response.data);
+        // for (const [key, value] of Object.entries(response.data)) {
+        //   const firstentry = value;
+        //   console.log("Stages", key);
+        //   // firstentry.forEach((p, i) => {
+        //   //   console.log("StartDate: ", p.Events[0].Esd);
+        //   //   console.log("EndDate :", p.Events[0].Ese);
+        //   //   console.log("Country :", p.Snm);
+        //   //   console.log("Tournaments :", p.Cnm);
+        //   //   console.log("Status :", p.Events[0].ECo);
+        //   // });
+        // }
+      })
+      .catch(function(error) {
+        console.error(error);
+      });
+  }
 
   dataTable() {
     return this.state.usersCollection.map((data, i) => {
@@ -102,13 +103,13 @@ export default class SeriesArchive extends Component {
                   <h6 className="title">Tournaments</h6>
                   <ul className="tournament-items-list">
                     <li className="tournament-item">
-                      <a href="javascript:void(0)"> FIFA World Cup 2022 </a>
+                      <a href="#"> International </a>
                     </li>
                     <li className="tournament-item">
-                      <a href="javascript:void(0)"> IEM Clogne 2022 </a>
+                      <a href="#"> League </a>
                     </li>
                     <li className="tournament-item">
-                      <a href="javascript:void(0)"> BAN vs WES Series </a>
+                      <a href="#"> Domestic </a>
                     </li>
                   </ul>
                 </div>
@@ -125,13 +126,10 @@ export default class SeriesArchive extends Component {
                     </div>
 
                     <div className="wrapper-users">
-                      
                       <div className="container">
                         <div>{this.dataTable()}</div>
                       </div>
-                      
                     </div>
-                    
                   </div>
                 </div>
               </div>
