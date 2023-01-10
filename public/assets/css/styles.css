@@ -1334,6 +1334,20 @@ textarea:focus {
   background-color: #485858;
   padding: 14px 10px;
   border-radius: 6px;
+  align-content: space-between;
+}
+.cricket-live-score1 {
+  color: white;
+  margin-top: 30px;
+  background-color: #0b3b3b;
+  padding: 14px 10px;
+  border-radius: 12px;
+}
+
+.table-header {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
 }
 
 .cricket-live-score a {

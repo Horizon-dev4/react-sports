@@ -15,7 +15,7 @@ export default class CurrentMatches extends Component {
     const options = {
       method: "GET",
       url: "https://livescore6.p.rapidapi.com/matches/v2/get-innings",
-      params: {Eid: '836829', Category: 'cricket'},
+      params: { Eid: "836829", Category: "cricket" },
       headers: {
         "x-rapidapi-key": "b6e89817d6msh36107de73277139p116779jsne307fb015e33",
         "x-rapidapi-host": "livescore6.p.rapidapi.com",
@@ -26,14 +26,30 @@ export default class CurrentMatches extends Component {
       .request(options)
       .then((response) => {
         // this.setState({ usersCollection: response.data });
-        this.setState({ usersCollection: response.data.SDInn});
-        // this.setState({ matchData: response.data.Stages.Events });
-        console.log(response.data.SDInn);
-        console.log(this.state.usersCollection.SDInn);
-        // console.log(this.state.matchData);
-        // console.log(response.data.SDInn);
+        let inn_dct1 = {};
+        const itemslst = ["item1", "item2", "item3","item4"];
 
+        for (let i = 0; i < response.data.SDInn.length; i++) {
+          inn_dct1[itemslst[i]] = response.data.SDInn[i]
+        }
         
+        let inn_dct2 = {};
+        for (let i = 0; i < response.data.Prns.length; i++) {
+          let num = i
+          let pl = 'pl'
+          inn_dct2[pl.concat(num.toString())] = response.data.Prns[i]
+        }
+        const object3 = Object.assign(inn_dct2, inn_dct1);
+
+        this.setState({
+
+          
+          usersCollection: [object3],
+        });
+        // this.setState({ matchData: response.data.Stages.Events });
+        
+        console.log(object3);
+        console.log(this.state.usersCollection);
       })
       .catch(function(error) {
         console.error(error);
@@ -44,7 +60,6 @@ export default class CurrentMatches extends Component {
     return this.state.usersCollection.map((data, i) => {
       return <DataTable obj={data} key={i} />;
     });
-
   }
 
   render() {
@@ -107,7 +122,6 @@ export default class CurrentMatches extends Component {
 
                     <div className="wrapper-users">
                       <div className="container">
-
                         {}
                         {/* <div class="d-flex justify-content-center">
                           <div class="spinner-border text-warning" role="status">
@@ -115,7 +129,6 @@ export default class CurrentMatches extends Component {
                           </div>
                         </div> */}
                         <div>{this.dataTable()}</div>
-                        
                       </div>
                       <br></br>
                     </div>
