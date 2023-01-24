@@ -58,3 +58,23 @@ justify-content: space-between;
     background-color: red;
     margin-top: 30px;
 }
+
+#button1 {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  #button2 {
+    /* background-color: red; */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+  }
+  

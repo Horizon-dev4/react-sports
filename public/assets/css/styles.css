@@ -56,7 +56,7 @@ body {
   background: #000;
   z-index: 999;
   height: 70px;
-  box-shadow: rgb(209 209 209 / 36%) 4px 25px 20px -20px;
+  box-shadow: rgb(7 24 24 / 36%) 4px 25px 20px -20px;
 }
 .nav-p {
   padding-left: 170px;
@@ -196,7 +196,7 @@ body {
 .tournament-items-inner {
   box-shadow: rgb(100 96 96 / 24%) 0px 3px 8px;
   height: 100vh;
-  background: #242424;
+  background: #071818;
   border-radius: 5px;
 }
 
@@ -348,7 +348,7 @@ body {
 .forum-items-inner {
   box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
   height: 100vh;
-  background: #242424;
+  background: #071818;
   border-radius: 5px;
 }
 
@@ -1326,12 +1326,17 @@ textarea:focus {
   margin-left: 2px;
 }
 
+/*#485858
 /* currentmatches css start*/
+
+.pull_up_section{
+  margin-top: -46px!important;
+}
 
 .cricket-live-score {
   color: white;
   margin-top: 30px;
-  background-color: #485858;
+  background-color: #000a0a;
   padding: 14px 10px;
   border-radius: 6px;
   align-content: space-between;
@@ -1452,4 +1457,43 @@ textarea:focus {
   color: #fff;
   margin-top: 10px;
   font-size: 10px;
+}
+
+
+#container {
+  display: flex;
+  justify-content: center;
+}
+
+
+#button1 {
+  background-color: #071818;
+  color: white;
+  padding: 8px 3px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 25px;
+  display: flex;
+  border:none;
+  min-width: 150px; 
+  min-height: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+#button2 {
+  background-color: #071818;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  max-width: 150px; 
+  max-height: 50px;
+}
+
+.category-seo-title{
+   color:#c8c8c8;
 }

@@ -59,3 +59,19 @@ small {
 .pt-200{
   padding-top: 200px;
 }
+
+
+.cricket-team1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.cricket-team2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  
+}

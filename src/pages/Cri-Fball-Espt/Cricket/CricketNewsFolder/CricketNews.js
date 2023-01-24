@@ -1,70 +1,40 @@
 import axios from "axios";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import DataTable from "./DataTable";
-// import "../App.css";
-
-export default class SeriesArchive extends Component {
+import CricketNewsDataTable from './CricketNewsDataTable';
+export default class CricketNews extends Component {
   constructor(props) {
     super(props);
     this.state = { usersCollection: [] };
   }
 
   componentDidMount() {
-    const dateOfXDay = (xDay = -1) => {
-      // Get today's date
-      let today = new Date();
-      // Change the date by adding 1 to it (today + 1 = tomorrow)
-      today.setDate(today.getDate() + xDay);
-      // return yyyy-mm-dd format
-      let x = today
-        .toISOString()
-        .split("T")[0]
-        .split("-");
-      return x[0] + x[1] + x[2];
-      // return today.toISOString();
-    };
-
-    let e = dateOfXDay();
-    console.log(e);
-
     const options = {
-      method: "GET",
-      url: "https://livescore6.p.rapidapi.com/matches/v2/list-by-date",
-      params: { Category: "cricket", Date: e, Timezone: "6" },
+      method: 'GET',
+      url: 'https://livescore6.p.rapidapi.com/news/v2/list',
       headers: {
-        "x-rapidapi-key": "b6e89817d6msh36107de73277139p116779jsne307fb015e33",
-        "x-rapidapi-host": "livescore6.p.rapidapi.com",
-      },
+        'X-RapidAPI-Key': 'b6e89817d6msh36107de73277139p116779jsne307fb015e33',
+        'X-RapidAPI-Host': 'livescore6.p.rapidapi.com'
+      }
     };
-
+   
     axios
       .request(options)
       .then((response) => {
-        this.setState({ usersCollection: response.data.Stages });
-        // console.log(this.state.usersCollection);
+        this.setState({ usersCollection: response.data.homepageArticles });
+        console.log(this.state.usersCollection);
         console.log(response.data);
-        // for (const [key, value] of Object.entries(response.data)) {
-        //   const firstentry = value;
-        //   console.log("Stages", key);
-        //   // firstentry.forEach((p, i) => {
-        //   //   console.log("StartDate: ", p.Events[0].Esd);
-        //   //   console.log("EndDate :", p.Events[0].Ese);
-        //   //   console.log("Country :", p.Snm);
-        //   //   console.log("Tournaments :", p.Cnm);
-        //   //   console.log("Status :", p.Events[0].ECo);
-        //   // });
-        // }
       })
       .catch(function(error) {
         console.error(error);
       });
   }
 
-  dataTable() {
+  CricketNewsDataTable() {
     return this.state.usersCollection.map((data, i) => {
-      return <DataTable obj={data} key={i} />;
+      return <CricketNewsDataTable obj={data} key={i} />;
     });
+
   }
 
   render() {
@@ -78,16 +48,16 @@ export default class SeriesArchive extends Component {
                 <div className="games-menu">
                   <ul>
                     <li>
-                      <Link to="/currentmatches">TODAY MATCHES</Link>
+                      <Link to="/Live-Cricket-Matches">LIVE MATCHES</Link>
                     </li>
                     <li>
-                      <Link to="/seriesarchive">RESULTS</Link>
+                      <Link to="/Cricket-Result">RESULTS</Link>
                     </li>
                     <li>
-                      <Link to="/currentfutureseries">UPCOMING MATCHES</Link>
+                      <Link to="/upcoming-cricket-matches">UPCOMING MATCHES</Link>
                     </li>
                     <li>
-                      <Link to="/teams">Teams</Link>
+                      <Link to="/Cricket-News">NEWS</Link>
                     </li>
                   </ul>
                 </div>
@@ -121,14 +91,13 @@ export default class SeriesArchive extends Component {
                 <div className="row">
                   <div className="col-md-12">
                     <div className="match-heading">
-                      <h4>Cricket Schedule</h4>
-                      {/* <div className="line"></div> */}
                     </div>
 
                     <div className="wrapper-users">
-                      <div className="container">
-                        <div>{this.dataTable()}</div>
+                      <div className="container">                        
+                        <div>{this.CricketNewsDataTable()}</div>
                       </div>
+                      <br></br>
                     </div>
                   </div>
                 </div>

@@ -1,108 +1,49 @@
 import axios from "axios";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import DataTable from "./DataTable";
-// import "../App.css";
-
-export default class currentfutureseries extends Component {
+import CricketLiveMatchesDataTable from "./CricketLiveMatchesDataTable";
+export default class CricketLiveMatches extends Component {
   constructor(props) {
     super(props);
     this.state = { usersCollection: [] };
+
+    // this.state = { matchData: [] };
   }
 
   componentDidMount() {
-    // function formatDate(date) {
-    //   var d = new Date(date),
-    //     month = "" + (d.getMonth() + 1),
-    //     day = "" + d.getDate(),
-    //     year = d.getFullYear();
-
-    //   if (month.length < 2) month = "0" + month;
-    //   if (day.length < 2) day = "0" + day;
-
-    //   todayDate = [year, month, day].join("");
-    //   return todayDate;
-
-    // }
-
-    //   for (let i = 0; i < 6; i++) {
-    //     // const today = new Date();
-    //     let nextDate = new Date();
-    //     nextDate.setDate(nextDate.getDate() + i);
-
-    //     let newDate = formatDate(nextDate);
-    //     console.log(newDate);
-
-    //     // setTimeout(() => {
-    //     //    console.log("this is the first message");
-    //     //  }, 5000);
-
-    // }
-
-    // let currentDate = new Date().toISOString().slice(0, 10);
-    // console.log(currentDate);
-
-    const tomorrow = () => {
-      // Creating the date instance
-      let d = new Date();
-
-      // Adding one date to the present date
-      d.setDate(d.getDate() + 1);
-
-      let year = String(d.getFullYear());
-      let month = String(d.getMonth() + 1);
-      let day = String(d.getDate());
-
-      // Adding leading 0 if the day or month
-      // is one digit value
-      month = month.length == 1 ? month.padStart("2", "0") : month;
-
-      day = day.length == 1 ? day.padStart("2", "0") : day;
-      // Printing the present date
-      console.log(`${year}-${month}-${day}`);
-      return year.concat(month, day);
-    };
-
-    let d = tomorrow();
-    console.log(d);
-
     const options = {
       method: "GET",
-      url: "https://livescore6.p.rapidapi.com/matches/v2/list-by-date",
-      params: { Category: "cricket", Date: d, Timezone: "6" },
+      url: "https://livescore6.p.rapidapi.com/matches/v2/list-live",
+      params: { Category: "cricket", Timezone: "6" },
       headers: {
         "x-rapidapi-key": "b6e89817d6msh36107de73277139p116779jsne307fb015e33",
         "x-rapidapi-host": "livescore6.p.rapidapi.com",
       },
     };
-
+   
     axios
       .request(options)
       .then((response) => {
+        // this.setState({ usersCollection: response.data });
         this.setState({ usersCollection: response.data.Stages });
-        // console.log(this.state.usersCollection);
+        // this.setState({ matchData: response.data.Stages.Events });
+
+        console.log(this.state.usersCollection);
+        
+        // console.log(this.state.matchData);
         console.log(response.data);
-        // for (const [key, value] of Object.entries(response.data)) {
-        //   const firstentry = value;
-        //   console.log("Stages", key);
-        //   // firstentry.forEach((p, i) => {
-        //   //   console.log("StartDate: ", p.Events[0].Esd);
-        //   //   console.log("EndDate :", p.Events[0].Ese);
-        //   //   console.log("Country :", p.Snm);
-        //   //   console.log("Tournaments :", p.Cnm);
-        //   //   console.log("Status :", p.Events[0].ECo);
-        //   // });
-        // }
       })
       .catch(function(error) {
         console.error(error);
+
       });
   }
 
-  dataTable() {
+  CricketLiveMatchesDataTable() {
     return this.state.usersCollection.map((data, i) => {
-      return <DataTable obj={data} key={i} />;
+      return <CricketLiveMatchesDataTable obj={data} key={i} />;
     });
+
   }
 
   render() {
@@ -116,16 +57,16 @@ export default class currentfutureseries extends Component {
                 <div className="games-menu">
                   <ul>
                     <li>
-                      <Link to="/currentmatches">TODAY MATCHES</Link>
+                      <Link to="/Live-Cricket-Matches">LIVE MATCHES</Link>
                     </li>
                     <li>
-                      <Link to="/seriesarchive">RESULTS</Link>
+                      <Link to="/Cricket-Result">RESULTS</Link>
                     </li>
                     <li>
-                      <Link to="/currentfutureseries">UPCOMING MATCHES</Link>
+                      <Link to="/upcoming-cricket-matches">UPCOMING MATCHES</Link>
                     </li>
                     <li>
-                      <Link to="/teams">Teams</Link>
+                      <Link to="/Cricket-News">NEWS</Link>
                     </li>
                   </ul>
                 </div>
@@ -159,15 +100,22 @@ export default class currentfutureseries extends Component {
                 <div className="row">
                   <div className="col-md-12">
                     <div className="match-heading">
-                      <h4>Cricket Schedule</h4>
+                      {/* <h4>Cricket Schedule</h4> */}
                       {/* <div className="line"></div> */}
                     </div>
 
                     <div className="wrapper-users">
                       <div className="container">
-                        <div>{this.dataTable()}</div>
-                      </div>
 
+                        {}
+                        {/* <div class="d-flex justify-content-center">
+                          <div class="spinner-border text-warning" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                          </div>
+                        </div> */}
+                        <div>{this.CricketLiveMatchesDataTable()}</div>
+                        
+                      </div>
                       <br></br>
                     </div>
                   </div>

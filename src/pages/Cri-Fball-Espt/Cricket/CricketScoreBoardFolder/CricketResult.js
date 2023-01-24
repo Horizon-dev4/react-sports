@@ -1,21 +1,44 @@
 import axios from "axios";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import DataTable from "./DataTable";
+import ResultDataTable from "./CrciketResultDataTable";
 
-export default class CurrentMatches extends Component {
+// import "../App.css";
+
+export default class Result extends Component {
   constructor(props) {
     super(props);
-    this.state = { usersCollection: [] };
-
-    // this.state = { matchData: [] };
+    this.state = { usersCollection: [],
+    // eventId: []
+    // data1:["noman"]
+    };
+  //   this.state1 = {
+  //     data: 'Hello World'
+  // }
   }
 
   componentDidMount() {
+    const dateOfXDay = (xDay = -1) => {
+      // Get today's date
+      let today = new Date();
+      // Change the date by adding 1 to it (today + 1 = tomorrow)
+      today.setDate(today.getDate() + xDay);
+      // return yyyy-mm-dd format
+      let x = today
+        .toISOString()
+        .split("T")[0]
+        .split("-");
+      return x[0] + x[1] + x[2];
+      // return today.toISOString();
+    };
+
+    let e = dateOfXDay();
+    console.log(e);
+
     const options = {
       method: "GET",
-      url: "https://livescore6.p.rapidapi.com/matches/v2/get-innings",
-      params: { Eid: "836829", Category: "cricket" },
+      url: "https://livescore6.p.rapidapi.com/matches/v2/list-by-date",
+      params: { Category: "cricket", Date: e, Timezone: "6" },
       headers: {
         "x-rapidapi-key": "b6e89817d6msh36107de73277139p116779jsne307fb015e33",
         "x-rapidapi-host": "livescore6.p.rapidapi.com",
@@ -25,64 +48,78 @@ export default class CurrentMatches extends Component {
     axios
       .request(options)
       .then((response) => {
-        // this.setState({ usersCollection: response.data });
-        let inn_dct1 = {};
-        const itemslst = ["item1", "item2", "item3","item4"];
+        this.setState({ usersCollection: response.data.Stages });
+       // eventId: response.data.Stages[0].Events[0].Eid
+        // console.log(this.state.usersCollection);
+        console.log(response.data.Stages) ;
+        console.log(response.data.Stages[0].Events[0].Eid);
+        console.log(this.state.eventId);
+        // this.setState({ data1:response.data});
 
-        for (let i = 0; i < response.data.SDInn.length; i++) {
-          inn_dct1[itemslst[i]] = response.data.SDInn[i]
-        }
-        
-        let inn_dct2 = {};
-        for (let i = 0; i < response.data.Prns.length; i++) {
-          let num = i
-          let pl = 'pl'
-          inn_dct2[pl.concat(num.toString())] = response.data.Prns[i]
-        }
-        const object3 = Object.assign(inn_dct2, inn_dct1);
-
-        this.setState({
-
-          
-          usersCollection: [object3],
-        });
-        // this.setState({ matchData: response.data.Stages.Events });
-        
-        console.log(object3);
-        console.log(this.state.usersCollection);
+        // for (const [key, value] of Object.entries(response.data)) {
+        //   const firstentry = value;
+        //   console.log("Stages", key);
+        //   // firstentry.forEach((p, i) => {
+        //   //   console.log("StartDate: ", p.Events[0].Esd);
+        //   //   console.log("EndDate :", p.Events[0].Ese);
+        //   //   console.log("Country :", p.Snm);
+        //   //   console.log("Tournaments :", p.Cnm);
+        //   //   console.log("Status :", p.Events[0].ECo);
+        //   // });
+        // }
       })
       .catch(function(error) {
         console.error(error);
       });
   }
 
-  dataTable() {
+
+
+//lets try demo
+
+
+  
+
+  ResultDataTable() {
     return this.state.usersCollection.map((data, i) => {
-      return <DataTable obj={data} key={i} />;
+      return <ResultDataTable obj={data} key={i} />;
     });
   }
-
+//  ScorePrediction(){
+//   return this.state.usersCollection.map((data, i) => {
+//     return <ScorePrediction obj={data} key={i} />;
+//   });
+//  }
   render() {
     return (
       <>
+        {/* <ScorePrediction eid={this.state.eventId} />   */}
         <section className="home-main-section">
           <div className="container-fluid">
             {/* page changing tab */}
             <div className="row">
+            {/* <ScorePrediction eid={response.data.Stages[0].Events[0].Eid} /> */}
+            {/* <ScorePrediction name={"noman siddique"}/> */}
               <div className="col-lg-12 col-md-12">
+
+               <div>
+               {/* <ScorePrediction
+               data1={this.state.data1}
+               /> */}
+               </div>
                 <div className="games-menu">
                   <ul>
                     <li>
-                      <Link to="/currentmatches">TODAY MATCHES</Link>
+                      <Link to="/Live-Cricket-Matches">LIVE MATCHES</Link>
                     </li>
                     <li>
-                      <Link to="/seriesarchive">RESULTS</Link>
+                      <Link to="/Cricket-Result">RESULTS</Link>
                     </li>
                     <li>
-                      <Link to="/currentfutureseries">UPCOMING MATCHES</Link>
+                      <Link to="/upcoming-cricket-matches">UPCOMING MATCHES</Link>
                     </li>
                     <li>
-                      <Link to="/teams">Teams</Link>
+                      <Link to="/Cricket-News">NEWS</Link>
                     </li>
                   </ul>
                 </div>
@@ -116,21 +153,16 @@ export default class CurrentMatches extends Component {
                 <div className="row">
                   <div className="col-md-12">
                     <div className="match-heading">
-                      <h4>Cricket Scored Card</h4>
+                      {/* <h4>Cricket Schedule</h4> */}
+                      {/* <ScoreAndPredictionDataTable /> */}
                       {/* <div className="line"></div> */}
                     </div>
 
                     <div className="wrapper-users">
                       <div className="container">
-                        {}
-                        {/* <div class="d-flex justify-content-center">
-                          <div class="spinner-border text-warning" role="status">
-                            <span class="visually-hidden">Loading...</span>
-                          </div>
-                        </div> */}
-                        <div>{this.dataTable()}</div>
+                        <div>{this.ResultDataTable()}</div>
+
                       </div>
-                      <br></br>
                     </div>
                   </div>
                 </div>

@@ -13,19 +13,19 @@ function Cricket() {
               <div className="games-menu">
                 <ul>
                   <li>
-                    <Link to="/currentmatches">Today Matches</Link>
+                    <Link to="/Live-Cricket-Matches">Today Matches</Link>
                   </li>
                   <li>
-                    <Link to="/currentfutureseries">Upcoming Matches</Link>
+                    <Link to="/upcoming-cricket-matches">Upcoming Matches</Link>
                   </li>
                   {/* <li>
                     <Link to="/matchesbyday">Matches By Day</Link>
                   </li> */}
                   <li>
-                    <Link to="/teams">Teams</Link>
+                    <Link to="/Cricket-News">News</Link>
                   </li>
                   <li>
-                    <Link to="/seriesarchive">Results Archive</Link>
+                    <Link to="/Live-Cricket-Result">Results Archive</Link>
                   </li>
                 </ul>
               </div>
@@ -70,143 +70,7 @@ function Cricket() {
                       online by checking tips from our experts.
                     </p>
                   </div>
-                  {/* <section className="slider">
-                    <div className="container">
-                      <Carousel>
-                        <Carousel.Item>
-                          <Carousel.Caption>
-                            <div className="slider-box">
-                              <h3>First slide label</h3>
-                              <p>
-                                Nulla vitae elit libero, a pharetra augue mollis
-                                interdum.
-                              </p>
-                              <p>
-                                Nulla vitae elit libero, a pharetra augue mollis
-                                interdum.
-                              </p>
-                              <p>
-                                Nulla vitae elit libero, a pharetra augue mollis
-                                interdum.
-                              </p>
-                            </div>
-                          </Carousel.Caption>
-                        </Carousel.Item>
-                        <Carousel.Item>
-                          <Carousel.Caption>
-                            <h3>Second slide label</h3>
-                            <p>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit.
-                            </p>
-                            <p>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit.
-                            </p>
-                            <p>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit.
-                            </p>
-                          </Carousel.Caption>
-                        </Carousel.Item>
-                        <Carousel.Item>
-                          <img
-                            className="d-block w-100"
-                            src="holder.js/800x400?text=Third slide&bg=20232a"
-                            alt="Third slide"
-                          />
-
-                          <Carousel.Caption>
-                            <h3>Third slide label</h3>
-                            <p>
-                              Praesent commodo cursus magna, vel scelerisque
-                              nisl consectetur.
-                            </p>
-                            <p>
-                              Praesent commodo cursus magna, vel scelerisque
-                              nisl consectetur.
-                            </p>
-                            <p>
-                              Praesent commodo cursus magna, vel scelerisque
-                              nisl consectetur.
-                            </p>
-                          </Carousel.Caption>
-                        </Carousel.Item>
-                      </Carousel>
-                    </div>
-                  </section> */}
-
-                  {/* Each game row */}
-                  {/* <div className="row match-border">
-                    <div className="col-lg-3 col-md-3">
-                      <div className="live-match-left">
-                        <h5>ESL ANZ Championship</h5>
-                        <p>21/11/2022 07:00 UTC</p>
-                      </div>
-                    </div>
-                    <div className="col-lg-6 col-md-6">
-                      <div className="live-match-middle">
-                        <p>Kraken</p>
-                        <span>3.55</span>
-                        <p>vs.</p>
-                        <span>1.25</span>
-                        <p>Nut E</p>
-                      </div>
-                    </div>
-                    <div className="col-lg-3 col-md-3 ">
-                      <div className="live-match-right">
-                        <button>BET NOW</button>
-                      </div>
-                    </div>
-                  </div> */}
-
-                  {/* Each game row */}
-                  {/* <div className="row match-border">
-                    <div className="col-lg-3 col-md-3">
-                      <div className="live-match-left">
-                        <h5>ESL ANZ Championship</h5>
-                        <p>21/11/2022 07:00 UTC</p>
-                      </div>
-                    </div>
-                    <div className="col-lg-6 col-md-6">
-                      <div className="live-match-middle">
-                        <p>Kraken</p>
-                        <span>3.55</span>
-                        <p>vs.</p>
-                        <span>1.25</span>
-                        <p>Nut E</p>
-                      </div>
-                    </div>
-                    <div className="col-lg-3 col-md-3 ">
-                      <div className="live-match-right">
-                        <button>BET NOW</button>
-                      </div>
-                    </div>
-                  </div> */}
-
-                  {/* Each game row */}
-                  {/* <div className="row match-border">
-                    <div className="col-lg-3 col-md-3">
-                      <div className="live-match-left">
-                        <h5>ESL ANZ Championship</h5>
-                        <p>21/11/2022 07:00 UTC</p>
-                      </div>
-                    </div>
-                    <div className="col-lg-6 col-md-6">
-                      <div className="live-match-middle">
-                        <p>Kraken</p>
-                        <span>3.55</span>
-                        <p>vs.</p>
-                        <span>1.25</span>
-                        <p>Nut E</p>
-                      </div>
-                    </div>
-                    <div className="col-lg-3 col-md-3 ">
-                      <div className="live-match-right">
-                        <button>BET NOW</button>
-                      </div>
-                    </div>
-                  </div> */}
+                  
 
                   <div
                     id="carouselExampleCaptions"

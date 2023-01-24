@@ -68,4 +68,12 @@
     min-width: auto;
     width: 90%;
   }
+  .tournament-items-inner{
+	height: 20vh;
+  }
+
+  .forum-items-inner{
+	height: 30vh;
+	margin-top: 35px;
+  }
 }

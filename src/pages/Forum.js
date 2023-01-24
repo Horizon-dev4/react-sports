@@ -24,8 +24,10 @@ function Forum() {
             </div>
           </div>
           <div class="col-lg-6 col-md-6 match-category-items-outer">
-            <div class="match-schedule-items-wrapper plr-40">
-              <h4 class="sports-news-heading">Latest Sports Talk</h4>
+          <h4 class="sports-news-heading">Under development</h4>
+            {/* <div class="match-schedule-items-wrapper plr-40">
+              <h4 class="sports-news-heading">Under development</h4>
+
               <div class="sport-news-items">
                 <div class="sport-news-item-inner">
                   <a href="#" class="item-link">
@@ -77,7 +79,9 @@ function Forum() {
                   <p class="item-post-time">4 Hours ago</p>
                 </div>
               </div>
-            </div>
+
+
+            </div> */}
           </div>
           <div class="col-lg-4 col-md-4 forum-items-outer">
             <div class="forum-items-inner">

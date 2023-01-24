@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <React.Fragment>
+    
       <section class="home-main-section">
         <div class="container">
           <div class="row">
@@ -46,87 +47,95 @@ export default function Home() {
             </div>
             <div class="col-lg-6 col-md-6 match-category-items-outer">
               <div class="match-category-items-inner">
-                <Link to="/currentmatches" class="match-category-item">
+                <Link to="/Live-Cricket-Matches" class="match-category-item">
                   Cricket
                 </Link>
-                <a href="javascript:void(0)" class="match-category-item">
-                  Football
-                </a>
+                <Link to="/football-news" class="match-category-item"> 
+                Football
+                </Link>               
                 <Link to="/esports" class="match-category-item">
                   Esports
                 </Link>
               </div>
+
+              {/* middle section start from here */}
+
               <div class="match-schedule-items-wrapper">
-                <h4 class="date-title">Saturday – 2022/07/16</h4>
+                <link to="/Live-Cricket-Matches"></link>
+                {/* <h4 class="date-title">Saturday – 2022/07/16</h4> */}
                 <div class="match-item-outer">
                   <div class="match-time">
-                    <i class="fas fa-futbol"></i>
-                    <p>17:00</p>
+                    {/* <i class="fas fa-futbol"></i>
+                    <p>17:00</p> */}
                   </div>
                   <div class="match-name">
-                    <p>
+                    {/* <p>
                       Natus Vincere <b> VS </b> Astralis
-                    </p>
+                    </p> */}
                   </div>
                   <div class="match-type">
-                    <p>IEM Tournaments</p>
+                    {/* <p>IEM Tournaments</p> */}
                   </div>
                   <div class="predition-btn">
-                    <Link to="/Prediction"> Prediction </Link>
+                    {/* <Link to="/Prediction"> Prediction </Link> */}
                   </div>
                 </div>
                 <div class="match-item-outer">
                   <div class="match-time">
-                    <i class="fas fa-futbol"></i>
-                    <p>17:00</p>
+                    {/* <i class="fas fa-futbol"></i>
+                    <p>17:00</p> */}
                   </div>
                   <div class="match-name">
-                    <p>
+                    {/* <p>
                       Natus Vincere <b> VS </b> Astralis
-                    </p>
+                    </p> */}
                   </div>
                   <div class="match-type">
-                    <p>IEM Tournaments</p>
+                    {/* <p>IEM Tournaments</p> */}
                   </div>
                   <div class="predition-btn">
-                    <Link to="/Prediction"> Prediction </Link>
+                    {/* <Link to="/Prediction"> Prediction </Link> */}
                   </div>
                 </div>
                 <div class="match-item-outer">
                   <div class="match-time">
-                    <i class="fas fa-futbol"></i>
-                    <p>17:00</p>
+                    {/* <i class="fas fa-futbol"></i>
+                    <p>17:00</p> */}
                   </div>
                   <div class="match-name">
-                    <p>
+                    {/* <p>
                       Natus Vincere <b> VS </b> Astralis
-                    </p>
+                    </p> */}
                   </div>
                   <div class="match-type">
-                    <p>IEM Tournaments</p>
+                    {/* <p>IEM Tournaments</p> */}
                   </div>
                   <div class="predition-btn">
-                    <Link to="/Prediction"> Prediction </Link>
+                    {/* <Link to="/Prediction"> Prediction </Link> */}
                   </div>
                 </div>
                 <div class="match-item-outer">
                   <div class="match-time">
-                    <i class="fas fa-futbol"></i>
-                    <p>17:00</p>
+                    {/* <i class="fas fa-futbol"></i>
+                    <p>17:00</p> */}
                   </div>
                   <div class="match-name">
-                    <p>
+                    {/* <p>
                       Natus Vincere <b> VS </b> Astralis
-                    </p>
+                    </p> */}
                   </div>
                   <div class="match-type">
-                    <p>IEM Tournaments</p>
+                    {/* <p>IEM Tournaments</p> */}
                   </div>
                   <div class="predition-btn">
-                    <Link to="/Prediction"> Prediction </Link>
+                    {/* <Link to="/Prediction"> Prediction </Link> */}
                   </div>
                 </div>
               </div>
+
+            {/* right section start from here */}
+
+
             </div>
             <div class="col-lg-4 col-md-4 forum-items-outer">
               <div class="forum-items-inner mt-20">

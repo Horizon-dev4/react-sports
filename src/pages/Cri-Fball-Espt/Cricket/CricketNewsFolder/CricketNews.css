@@ -1,0 +1,49 @@
+.category-label {
+    text-align: left;
+}
+
+.category-seo-title{
+   text-align: center;
+  
+}
+
+.category-seo-description{
+    text-align: left;
+}
+
+
+.wrapper-users {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    
+}
+
+.container h3 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    color:#FFCC00;
+}
+
+.category-label {
+    font-size: 1.2em;
+    color: gray;
+    margin-bottom: 1em;
+}
+
+.container img {
+    max-width: 100%;
+    margin-bottom: 2em;
+}
+
+.container p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 1em;
+    color:bisque;
+}

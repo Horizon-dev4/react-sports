@@ -2,12 +2,13 @@
   margin-bottom: 30px;
   padding-top: 10px;
   height: 40px;
-  background-color: #0087d2;
+  background-color: #071818;
 }
 
 .games-menu ul {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
+  margin-left: 24%;
 }
 
 .games-menu ul li a {
@@ -45,8 +46,15 @@
 .match-heading {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 16px;
+  margin-bottom: -26px;
 }
+
+@media (max-width: 600px){
+  .match-heading{
+    margin-bottom: 15px;
+  }
+}
+
 .match-heading h4 {
   color: #fff;
   width: 50%;
