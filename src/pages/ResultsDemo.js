@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 export default function ResultsDemo() {
   return (
     <>
@@ -11,13 +10,7 @@ export default function ResultsDemo() {
                 <h6 class="title">Tournaments</h6>
                 <ul class="tournament-items-list">
                   <li class="tournament-item">
-                    <a href="javascript:void(0)"> FIFA World Cup 2022 </a>
-                  </li>
-                  <li class="tournament-item">
-                    <a href="javascript:void(0)"> IEM Clogne 2022 </a>
-                  </li>
-                  <li class="tournament-item">
-                    <a href="javascript:void(0)"> BAN vs WES Series </a>
+                    <a href="javascript:void(0)"> Comming  </a>
                   </li>
                 </ul>
               </div>
@@ -32,29 +25,10 @@ export default function ResultsDemo() {
                 <h6 class="title">Forum</h6>
                 <ul class="forum-items-list">
                   <li class="forum-item">
-                    <span>CSGO:</span>
+                    <span>Update : </span>
                     <a href="javascript:void(0)">
-                      {" "}
-                      Navi in terrific form (128){" "}
+                      Comming Soon
                     </a>
-                  </li>
-                  <li class="forum-item">
-                    <span>News:</span>
-                    <a href="javascript:void(0)"> Bangladesh ranks 3 (67) </a>
-                  </li>
-                  <li class="forum-item">
-                    <span>Football:</span>
-                    <a href="javascript:void(0)">
-                      Messi will win worldcup this year (530)
-                    </a>
-                  </li>
-                  <li class="forum-item">
-                    <span>CSGO:</span>
-                    <a href="javascript:void(0)"> Navi vs Astralis (448) </a>
-                  </li>
-                  <li class="forum-item">
-                    <span>Off Topic:</span>
-                    <a href="javascript:void(0)"> RIP Shinjo Abe(142) </a>
                   </li>
                 </ul>
               </div>

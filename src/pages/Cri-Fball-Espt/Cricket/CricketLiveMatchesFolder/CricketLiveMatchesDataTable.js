@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const CricketLiveMatchesDataTable = (props) => {
@@ -14,13 +13,14 @@ const CricketLiveMatchesDataTable = (props) => {
       <div className="cricket-live-score">
 
         <div className="row" onClick={handleClick}>
-          <div className="col-md-3">
+          <div className="col-md-3 po-1">
             <div className="cricket-team1">
 
               <p className="team-name-color">
                 {props.obj.Events[0].T1[0].Nm}
-                <br></br>
               </p>
+              
+              {props.obj.Events[0].Tr1C1 && props.obj.Events[0].Tr1CW1 && props.obj.Events[0].Tr1CO1 ?(
               <p className="team-score-color">
                 {
                   props.obj.Events[0].Tr1C1 +
@@ -31,16 +31,18 @@ const CricketLiveMatchesDataTable = (props) => {
                   ")" +
                   " "}
               </p>
+              ): null}
+
               <p className="team-score-color">
               {props.obj.Events[0].Tr1C2}/
               {props.obj.Events[0].Tr1CW2}
-              ({props.obj.Events[0].Tr1CO2}){" "}
+              ({props.obj.Events[0].Tr1CO2})
                 
               </p>
             </div>
           </div>
 
-          <div className="col-md-6">
+          <div className="col-md-6 po-3">
             <div className="cricket-score-middle">
               <h4>{props.obj.Snm}</h4>
               <p>
@@ -85,17 +87,19 @@ const CricketLiveMatchesDataTable = (props) => {
 
           </div>
 
-          <div className="col-md-3">
+          <div className="col-md-3 po-2">
             <div className="cricket-team2">
               <p className="team-name-color">
                 {props.obj.Events[0].T2[0].Nm}
               </p>
-              <p className="team-score-color">           
-                {props.obj.Events[0].Tr2C1}/
-                {props.obj.Events[0].Tr2CW1}
-                ({props.obj.Events[0].Tr2CO1}){" "}
-                               
-              </p>
+              {props.obj.Events[0].Tr2C1 && props.obj.Events[0].Tr2CW1 && props.obj.Events[0].Tr2CO1 ?(
+                <p className="team-score-color">           
+                  {props.obj.Events[0].Tr2C1}/
+                  {props.obj.Events[0].Tr2CW1}
+                  ({props.obj.Events[0].Tr2CO1}){" "}
+                                
+                </p>
+              ): null}
               <p className="team-score-color">
                 {props.obj.Events[0].Tr2C2}/
                 {props.obj.Events[0].Tr2CW2}

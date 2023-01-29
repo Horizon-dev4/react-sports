@@ -1329,8 +1329,8 @@ textarea:focus {
 /*#485858
 /* currentmatches css start*/
 
-.pull_up_section{
-  margin-top: -46px!important;
+.pull_up_section {
+  margin-top: -46px !important;
 }
 
 .cricket-live-score {
@@ -1340,6 +1340,7 @@ textarea:focus {
   padding: 14px 10px;
   border-radius: 6px;
   align-content: space-between;
+  cursor: pointer;
 }
 .cricket-live-score1 {
   color: white;
@@ -1459,12 +1460,10 @@ textarea:focus {
   font-size: 10px;
 }
 
-
 #container {
   display: flex;
   justify-content: center;
 }
-
 
 #button1 {
   background-color: #071818;
@@ -1475,9 +1474,9 @@ textarea:focus {
   cursor: pointer;
   margin-right: 25px;
   display: flex;
-  border:none;
-  min-width: 150px; 
-  min-height: 50px;
+  border: none;
+  min-width: 128px;
+  min-height: 43px;
   align-items: center;
   justify-content: center;
 }
@@ -1490,10 +1489,10 @@ textarea:focus {
   border: none;
   text-align: center;
   cursor: pointer;
-  max-width: 150px; 
+  max-width: 150px;
   max-height: 50px;
 }
 
-.category-seo-title{
-   color:#c8c8c8;
+.category-seo-title {
+  color: #c8c8c8;
 }

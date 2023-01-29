@@ -32,6 +32,7 @@ export default class UpcomingCricketDataTable extends Component {
               <div className="col-md-6">
                 <div className="cricket-score-middle">
                   <h4>{this.props.obj.Snm}</h4>
+                  {this.props.obj.Events[0].ErnInf ?(
                   <p> {this.props.obj.Events[0].ErnInf +
                       ", " +
                       this.props.obj.Cnm  + ", "+ this.props.obj.Events[0].Esd.toString().slice(8, 10)+ 
@@ -40,7 +41,7 @@ export default class UpcomingCricketDataTable extends Component {
                       "-"+this.props.obj.Events[0].Esd.toString().slice(4, 6)+
                       "-"+this.props.obj.Events[0].Esd.toString().slice(6, 8) 
                           }
-                  </p>
+                  </p> ): `Date will be released soon`}
                   <p className="team-name-color">
                     <h4>{this.props.obj.Events[0].T1[0].Nm+ ", " + this.props.obj.Cnm}</h4>
                   </p>

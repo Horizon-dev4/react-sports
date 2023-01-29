@@ -1,79 +1,90 @@
-@media screen and (max-width: 1200px){
-	.nav-item-list {
-	    margin-right: 15px;
-	}
-	.nav-item-link.login-btn.modal-sign {
-	    padding: 5px 40px;
-	    margin-left: 0;
-	}
+@media screen and (max-width: 1200px) {
+  .nav-item-list {
+    margin-right: 15px;
+  }
+  .nav-item-link.login-btn.modal-sign {
+    padding: 5px 40px;
+    margin-left: 0;
+  }
 }
-@media screen and (max-width: 991px){
-	.nav-toggle-btn {
-	    display: flex;
-	}
-	.nav-items-wrapper {
-	    flex-direction: column;
-	    position: fixed;
-	    right: -66%;
-	    top: -10px;
-	    padding-top: 50px;
-	    width: 50%;
-	    height: 100vh;
-	    background: #222222;
-	    align-items: flex-start;
-	    padding-left: 5%;
-	    overflow-x: hidden;
-	    transition: all .4s ease;
-	}
-	.menu-visible .nav-toggle-btn .btn-inner:before {
-	    transform: rotate(45deg);
-	    top: 0;
-	}
-	.menu-visible .nav-toggle-btn .btn-inner:after {
-    	transform: rotate(-45deg);
-    	top: 0;
+@media screen and (max-width: 991px) {
+  .nav-toggle-btn {
+    display: flex;
+  }
+  .nav-items-wrapper {
+    flex-direction: column;
+    position: fixed;
+    right: -66%;
+    top: -10px;
+    padding-top: 50px;
+    width: 50%;
+    height: 100vh;
+    background: #222222;
+    align-items: flex-start;
+    padding-left: 5%;
+    overflow-x: hidden;
+    transition: all 0.4s ease;
+  }
+  .menu-visible .nav-toggle-btn .btn-inner:before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+  .menu-visible .nav-toggle-btn .btn-inner:after {
+    transform: rotate(-45deg);
+    top: 0;
   }
   .menu-visible .nav-toggle-btn .btn-inner {
-	    border-color: transparent;
-	}
-	.nav-content-wrapper {
-	    justify-content: space-between;
-	}
-	.nav-content-wrapper.menu-visible .nav-items-wrapper {
-	    right: 0;
-	}
-	.tournament-items-outer {
-	    width: 100%;
-	}
-	.tournament-items-inner.mt-20 {
-	    margin-top: 0;
-	    height: auto;
-	    margin-bottom: 30px;
-	}
-	.match-category-items-outer {
-	    width: 100%;
-	}
-	.match-schedule-items-wrapper {
-	    height: auto;
-	}
-	.forum-items-outer {
-	    width: 100%;
-	}
-	.forum-items-inner.mt-20 {
-	    height: auto;
-	}
+    border-color: transparent;
+  }
+  .nav-content-wrapper {
+    justify-content: space-between;
+  }
+  .nav-content-wrapper.menu-visible .nav-items-wrapper {
+    right: 0;
+  }
+  .tournament-items-outer {
+    width: 100%;
+  }
+  .tournament-items-inner.mt-20 {
+    margin-top: 0;
+    height: auto;
+    margin-bottom: 30px;
+  }
+  .match-category-items-outer {
+    width: 100%;
+  }
+  .match-schedule-items-wrapper {
+    height: auto;
+  }
+  .forum-items-outer {
+    width: 100%;
+  }
+  .forum-items-inner.mt-20 {
+    height: auto;
+  }
 }
-@media (min-width: 320px) and (max-width: 600px) {
+@media (min-width: 320px) and (max-width: 700px) {
   .sign-in-modal .inner--sign-in-modal {
     min-width: auto;
     width: 90%;
   }
-  .tournament-items-inner{
-	height: 20vh;
+  .tournament-items-inner {
+    height: 20vh;
+    display: none;
   }
 
-  .forum-items-inner{
-	height: 30vh;
-	margin-top: 35px;
+  .forum-items-inner {
+    height: 30vh;
+    margin-top: 35px;
+  }
+
+  .po-1 {
+    order: 1;
+  }
+  .po-2 {
+    order: 2;
+  }
+  .po-3 {
+    order: 3;
   }
 }

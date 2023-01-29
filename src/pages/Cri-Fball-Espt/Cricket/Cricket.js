@@ -258,29 +258,10 @@ function Cricket() {
                 <h6 className="title">Forum</h6>
                 <ul className="forum-items-list">
                   <li className="forum-item">
-                    <span>CSGO:</span>
+                    <span>Update : </span>
                     <a href="javascript:void(0)">
-                      {" "}
-                      Navi in terrific form (128){" "}
+                      Comming Soon
                     </a>
-                  </li>
-                  <li className="forum-item">
-                    <span>News:</span>
-                    <a href="javascript:void(0)"> Bangladesh ranks 3 (67) </a>
-                  </li>
-                  <li className="forum-item">
-                    <span>Football:</span>
-                    <a href="javascript:void(0)">
-                      Messi will win worldcup this year (530)
-                    </a>
-                  </li>
-                  <li className="forum-item">
-                    <span>CSGO:</span>
-                    <a href="javascript:void(0)"> Navi vs Astralis (448) </a>
-                  </li>
-                  <li className="forum-item">
-                    <span>Off Topic:</span>
-                    <a href="javascript:void(0)"> RIP Shinjo Abe(142) </a>
                   </li>
                 </ul>
               </div>
