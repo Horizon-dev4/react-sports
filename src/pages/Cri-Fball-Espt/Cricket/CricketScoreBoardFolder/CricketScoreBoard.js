@@ -95,7 +95,7 @@ const CricketScoreBoard = (props) => {
               </div>
 
               {/* Middle Section Starts */}
-              <div className="col-lg-6 col-md-6 match-category-items-outer middle">
+              <div className="col-lg-7 col-md-7 match-category-items-outer middle">
                 {/* Total game row */}
                 <div className="row">
                   <div className="col-md-12">
@@ -112,7 +112,7 @@ const CricketScoreBoard = (props) => {
                             <span class="visually-hidden">Loading...</span>
                           </div>
                         </div> */}
-                        <div>{usersCollection.map((data, i) => {
+                        <div style={{"margin-top":"28px"}}>{usersCollection.map((data, i) => {
                           return <CricketScoreBoardDataTable obj={data} key={i} />;
                       })}</div>
                         
@@ -124,7 +124,7 @@ const CricketScoreBoard = (props) => {
               </div>
               {/* Middle Section Ends*/}
 
-              <div className="col-lg-4 col-md-4 forum-items-outer">
+              <div className="col-lg-3 col-md-3 forum-items-outer">
                 <div className="forum-items-inner">
                   <h6 className="title">Forum</h6>
                   <ul className="forum-items-list">

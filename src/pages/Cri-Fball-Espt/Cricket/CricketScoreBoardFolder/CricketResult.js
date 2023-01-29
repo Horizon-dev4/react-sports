@@ -142,7 +142,7 @@ export default class Result extends Component {
               </div>
 
               {/* Middle Section Starts */}
-              <div className="col-lg-6 col-md-6 match-category-items-outer middle">
+              <div className="col-lg-7 col-md-7 match-category-items-outer middle">
                 {/* Total game row */}
                 <div className="row">
                   <div className="col-md-12">
@@ -163,7 +163,7 @@ export default class Result extends Component {
               </div>
               {/* Middle Section Ends*/}
 
-              <div className="col-lg-4 col-md-4 forum-items-outer">
+              <div className="col-lg-3 col-md-3 forum-items-outer">
                 <div className="forum-items-inner">
                   <h6 className="title">Forum</h6>
                   <ul className="forum-items-list">

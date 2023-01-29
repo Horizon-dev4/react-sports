@@ -8,73 +8,75 @@
     
 
 } */
-.color h4{
-    /* margin-left: 50px; */
-    /* justify-content: space-between; */
-    /* margin-right: 50px; */
-    /* text-align: center; */
-    color:white;
+.color h4 {
+  /* margin-left: 50px; */
+  /* justify-content: space-between; */
+  /* margin-right: 50px; */
+  /* text-align: center; */
+  color: white;
 }
-.Tournament_name{
-    color:white;
-    padding:0px;
+.Tournament_name {
+  color: white;
+  padding: 0px;
 }
 
-.box{
-    width: 200px;
-    height: 100px;
-    border:1px solid white;
-    
+.box {
+  width: 200px;
+  height: 100px;
+  border: 1px solid white;
 }
 
 .match_details_team1 {
-     color:white;
-     padding:10px 5px;
-     
+  color: white;
+  padding: 10px 5px;
 }
 
-.teamname1{
-    display: flex;
-    justify-content: space-between;
+.teamname1 {
+  display: flex;
+  justify-content: space-between;
 }
-.teamname2{
-    display: flex;
-    justify-content: space-between;
-}
-
-.scorecard p{
-    justify-content: space-between;
-    display: flex;
-    padding: 10px 5px;
-    color:white
+.teamname2 {
+  display: flex;
+  justify-content: space-between;
 }
 
-.results{
-justify-content: space-between;
+.scorecard p {
+  justify-content: space-between;
+  display: flex;
+  padding: 10px 5px;
+  color: white;
+}
+
+.results {
+  justify-content: space-between;
 }
 
 .cricket-live-score {
-    color: white !important;
-    background-color: red;
-    margin-top: 30px;
+  color: white !important;
+  background-color: red;
+  margin-top: 30px;
 }
 
 #button1 {
-    background-color: blue;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-align: center;
-    cursor: pointer;
-    margin-right: 10px;
-  }
-  
-  #button2 {
-    /* background-color: red; */
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-align: center;
-    cursor: pointer;
-  }
-  
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+#button2 {
+  /* background-color: red; */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.cricket-team1 {
+  display: flex;
+  flex-direction: column;
+}

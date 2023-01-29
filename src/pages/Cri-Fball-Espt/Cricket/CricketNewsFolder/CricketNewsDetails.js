@@ -98,7 +98,7 @@ const CricketNewsDetails = (props) => {
                   <div className="match-heading"></div>
 
                   <div className="wrapper-users">
-                    <div className="container">
+                    <div className="container"  style={{"margin-top" : "28px"}}>
                       <div>
                         <h3>{location.state.title}</h3>
                       </div>
