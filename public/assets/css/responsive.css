@@ -87,6 +87,32 @@
   .po-3 {
     order: 3;
   }
+
+  /* navbar sided */
+  .navbar-toggler {
+    margin-left: 120px;
+  }
+  .nav-item-list {
+    justify-content: flex-end;
+  }
+  .nav-item-list .nav-item-link {
+    font-size: 10px;
+  }
+  .nav-item-link.login-btn.modal-sign {
+    padding: 7px 18px;
+    margin-left: 5px;
+    width: max-content;
+  }
+  .navbar-nav {
+    flex-direction: row;
+    margin-left: -58px;
+  }
+  .nav-p {
+    overflow-x: scroll;
+  }
+  .nav-p::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 @media (min-width: 300px) {

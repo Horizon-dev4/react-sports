@@ -36,10 +36,12 @@
     margin-bottom: 0px;
     padding-top: 0px;
     height: 40px;
-    overflow: auto;
+    overflow: scroll;
     background-color: #000;
   }
-
+  .games-menu::-webkit-scrollbar {
+    display: none;
+  }
   .games-menu ul {
     flex-direction: row;
     margin-left: -40px;
