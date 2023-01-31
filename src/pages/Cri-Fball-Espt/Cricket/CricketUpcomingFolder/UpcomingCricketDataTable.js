@@ -15,7 +15,7 @@ export default class UpcomingCricketDataTable extends Component {
       <>
        {/* <div className="pull_up_section">
        </div> */}
-       <tr className="pull_up_section">
+       {/* <tr className="pull_up_section"> */}
         <div className="cricket-live-score">
             <div className="row">
               {/* <div className="container"> */}
@@ -70,7 +70,7 @@ export default class UpcomingCricketDataTable extends Component {
             </div>
           </div>
           
-        </tr>
+        {/* </tr> */}
       
       </>
        
