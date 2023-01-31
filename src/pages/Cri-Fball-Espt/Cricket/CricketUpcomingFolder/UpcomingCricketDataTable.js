@@ -19,19 +19,25 @@ export default class UpcomingCricketDataTable extends Component {
         <div className="cricket-live-score">
             <div className="row">
               {/* <div className="container"> */}
-              <div className="col-md-3">
+              {/* <div className="col-md-3">
                 <div className="cricket-team1">
                   <p className="team-name-color">
                     {this.props.obj.Events[0].T1[0].Nm}
                   </p>
+                  <p className="team-name-color">
+                    {this.props.obj.Events[0].T2[0].Nm}
+                  </p>
 
                 </div>
-              </div>
+              </div> */}
               {/* </div> */}
 
-              <div className="col-md-6">
+              <div className="col-md-12 col-sm-12">
                 <div className="cricket-score-middle">
                   <h4>{this.props.obj.Snm}</h4>
+                  {this.props.obj.Events[0].T1[0].Nm}
+                  <br></br>
+                  {this.props.obj.Events[0].T2[0].Nm}
                   {this.props.obj.Events[0].ErnInf ?(
                   <p> {this.props.obj.Events[0].ErnInf +
                       ", " +
@@ -50,7 +56,7 @@ export default class UpcomingCricketDataTable extends Component {
 
               </div>
               
-              <div className="col-md-3">
+              {/* <div className="col-md-3">
                 <div className="cricket-team2">
                   <p className="team-name-color">
                     {this.props.obj.Events[0].T2[0].Nm}
@@ -58,11 +64,12 @@ export default class UpcomingCricketDataTable extends Component {
                   
 
                 </div>
-              </div>
+              </div> */}
               
 
             </div>
           </div>
+          
         </tr>
       
       </>
