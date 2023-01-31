@@ -33,16 +33,20 @@
 
 @media (max-width: 768px) {
   .games-menu {
-    margin-bottom: 150px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    height: 40px;
+    overflow: auto;
     background-color: #000;
   }
 
   .games-menu ul {
-    flex-direction: column;
+    flex-direction: row;
+    margin-left: -40px;
   }
 
   .games-menu ul li a {
-    width: fit-content;
+    width: max-content;
     border-bottom: 1px solid #fed700;
     margin-bottom: 10px;
     padding-bottom: 4px;
