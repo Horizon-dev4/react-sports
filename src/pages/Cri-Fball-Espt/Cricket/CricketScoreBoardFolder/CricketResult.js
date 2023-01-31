@@ -152,9 +152,9 @@ export default class Result extends Component {
                       {/* <div className="line"></div> */}
                     </div>
 
+                    <div>{this.ResultDataTable()}</div>
                     <div className="wrapper-users">
                       <div className="container">
-                        <div>{this.ResultDataTable()}</div>
 
                       </div>
                     </div>

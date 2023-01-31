@@ -89,7 +89,7 @@
   }
 }
 
-@media (min-width: 300px) and (max-width: 1800px) {
+@media (min-width: 300px) {
   .cricket-team1,
   .cricket-team2 {
     display: flex;
