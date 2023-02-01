@@ -7,8 +7,8 @@ import UseEffect from './pages/components/Hooks/UseEffect';
 import Login from './pages/components/login/Login';
 import Contact from './pages/Contact';
 import Cricket from './pages/Cri-Fball-Espt/Cricket/Cricket';
-import UpcomingCricketMatches from './pages/Cri-Fball-Espt/Cricket/CricketUpcomingFolder/UpcomingCricketMatches';
 import Result from './pages/Cri-Fball-Espt/Cricket/CricketScoreBoardFolder/CricketResult';
+import UpcomingCricketMatches from './pages/Cri-Fball-Espt/Cricket/CricketUpcomingFolder/UpcomingCricketMatches';
 import CallOfDuty from './pages/Cri-Fball-Espt/Esports/CallOfDuty/CallOfDuty';
 import CsGo from './pages/Cri-Fball-Espt/Esports/CsGo/CsGo';
 import Dota2 from './pages/Cri-Fball-Espt/Esports/Dota2/Dota2';
@@ -20,22 +20,20 @@ import Starcraft from './pages/Cri-Fball-Espt/Esports/Starcraft/Starcraft';
 import Valorant from './pages/Cri-Fball-Espt/Esports/Valorant/Valorant';
 import Dashboard from './pages/Dashboard';
 import Forum from './pages/Forum';
-import Home from './pages/Home';
 import NewsDemo from './pages/NewsDemo';
 // import News from './pages/NewsDemo';
 import Prediction from './pages/Prediction';
 // import Results from './pages/Results';
-import ResultsDemo from './pages/ResultsDemo';
+import Upcoming from './pages/components/Upcoming';
+import CricketLiveMatches from './pages/Cri-Fball-Espt/Cricket/CricketLiveMatchesFolder/CricketLiveMatches';
+import CricketNews from './pages/Cri-Fball-Espt/Cricket/CricketNewsFolder/CricketNews';
+import CricketNewsDetails from './pages/Cri-Fball-Espt/Cricket/CricketNewsFolder/CricketNewsDetails';
+import HomeNews from './pages/Cri-Fball-Espt/Cricket/CricketNewsFolder/HomeNews';
+import CricketScoreBoard from './pages/Cri-Fball-Espt/Cricket/CricketScoreBoardFolder/CricketScoreBoard';
+import FootballNews from './pages/Cri-Fball-Espt/Football/FootballNews';
 import First from './pages/tournaments/First/First';
 import Second from './pages/tournaments/Second/Second';
 import Third from './pages/tournaments/Third/Third';
-import CricketLiveMatches from './pages/Cri-Fball-Espt/Cricket/CricketLiveMatchesFolder/CricketLiveMatches';
-import CricketNews from './pages/Cri-Fball-Espt/Cricket/CricketNewsFolder/CricketNews';
-import CricketScoreBoard from './pages/Cri-Fball-Espt/Cricket/CricketScoreBoardFolder/CricketScoreBoard';
-import CricketNewsDetails from './pages/Cri-Fball-Espt/Cricket/CricketNewsFolder/CricketNewsDetails';
-import Upcoming from './pages/components/Upcoming';
-import FootballNews from './pages/Cri-Fball-Espt/Football/FootballNews';
-import News from './pages/NewsDemo';
 
 
 function App() {
@@ -43,7 +41,7 @@ function App() {
       <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" element={ <CricketLiveMatches/> } />
+        <Route path="/" element={ <HomeNews /> } />
         <Route path="/Prediction" element={ <Prediction/> } />
         {/* <Route path="/Results" element={ <Results/> } /> */}
         <Route path="/Results" element={ <Result /> } />
@@ -76,6 +74,10 @@ function App() {
         <Route path="/Cricket-News-Details" element={ <CricketNewsDetails  />}/>
         <Route path="/upcoming" element={ <Upcoming  />}/>
         <Route path="/football-news" element={ <FootballNews  />}/> 
+        {/* <Route path="/home-news" element={ <HomeNews />}/>  */}
+
+
+
 
 
 

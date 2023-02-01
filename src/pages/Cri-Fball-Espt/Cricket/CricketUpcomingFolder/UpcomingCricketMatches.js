@@ -161,9 +161,9 @@ export default class UpcomingCricketMatches extends Component {
                       {/* <div className="line"></div> */}
                     </div>
 
+                    <div>{this.UpcomingCricketDataTable()}</div>
                     <div className="wrapper-users">
                       <div className="container">
-                        <div>{this.UpcomingCricketDataTable()}</div>
                       </div>
 
                       <br></br>

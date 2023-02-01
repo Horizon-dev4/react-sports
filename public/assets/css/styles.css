@@ -240,6 +240,7 @@ body {
 
 .match-category-items-inner {
   text-align: center;
+  margin-left: 10px;
 }
 .match-category-item:hover {
   background: #c13500;
@@ -1441,6 +1442,7 @@ textarea:focus {
 
 .footer-social {
   text-align: center;
+  margin-top: 20px;
 }
 .footer-social a {
   padding: 16px 10px;

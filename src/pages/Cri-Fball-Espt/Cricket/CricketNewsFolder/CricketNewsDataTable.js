@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./CricketNews.css";
-import { useNavigate  } from "react-router-dom";
 
 const CricketNewsDataTable = (props) => {
   const navigate = useNavigate();
@@ -12,7 +12,7 @@ const CricketNewsDataTable = (props) => {
   };
   
     return (
-      <tr>
+      <>
         <div className="cricket-live-score">
           <div className="row"onClick={handleClick}>
 
@@ -35,7 +35,7 @@ const CricketNewsDataTable = (props) => {
 
           </div>
         </div>
-      </tr>
+      </>
     );
 
   }

@@ -1,8 +1,8 @@
 import axios from "axios";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import CricketNewsDataTable from './CricketNewsDataTable';
-export default class CricketNews extends Component {
+import CricketNewsDataTable from "./CricketNewsDataTable";
+export default class HomeNews extends Component {
   constructor(props) {
     super(props);
     this.state = { usersCollection: [] };
@@ -10,14 +10,14 @@ export default class CricketNews extends Component {
 
   componentDidMount() {
     const options = {
-      method: 'GET',
-      url: 'https://livescore6.p.rapidapi.com/news/v2/list',
+      method: "GET",
+      url: "https://livescore6.p.rapidapi.com/news/v2/list",
       headers: {
-        'X-RapidAPI-Key': 'b6e89817d6msh36107de73277139p116779jsne307fb015e33',
-        'X-RapidAPI-Host': 'livescore6.p.rapidapi.com'
-      }
+        "X-RapidAPI-Key": "b6e89817d6msh36107de73277139p116779jsne307fb015e33",
+        "X-RapidAPI-Host": "livescore6.p.rapidapi.com",
+      },
     };
-   
+
     axios
       .request(options)
       .then((response) => {
@@ -25,7 +25,7 @@ export default class CricketNews extends Component {
         console.log(this.state.usersCollection);
         console.log(response.data);
       })
-      .catch(function(error) {
+      .catch(function (error) {
         console.error(error);
       });
   }
@@ -34,32 +34,26 @@ export default class CricketNews extends Component {
     return this.state.usersCollection.map((data, i) => {
       return <CricketNewsDataTable obj={data} key={i} />;
     });
-
   }
 
   render() {
     return (
       <>
         <section className="home-main-section">
-          <div className="container-fluid">
+          <div className="container">
             {/* page changing tab */}
             <div className="row">
-              <div className="col-lg-12 col-md-12">
-                <div className="games-menu">
-                  <ul>
-                    <li>
-                      <Link to="/Live-Cricket-Matches">LIVE MATCHES</Link>
-                    </li>
-                    <li>
-                      <Link to="/Cricket-Result">RESULTS</Link>
-                    </li>
-                    <li>
-                      <Link to="/upcoming-cricket-matches">UPCOMING MATCHES</Link>
-                    </li>
-                    <li>
-                      <Link to="/Cricket-News">NEWS</Link>
-                    </li>
-                  </ul>
+              <div class="col-lg-10 col-md-10 match-category-items-outer">
+                <div class="match-category-items-inner">
+                  <Link to="/Live-Cricket-Matches" class="match-category-item">
+                    Cricket
+                  </Link>
+                  <Link to="/football-news" class="match-category-item">
+                    Football
+                  </Link>
+                  <Link to="/esports" class="match-category-item">
+                    Esports
+                  </Link>
                 </div>
               </div>
             </div>
@@ -73,7 +67,7 @@ export default class CricketNews extends Component {
                   <h6 className="title">Tournaments</h6>
                   <ul className="tournament-items-list">
                     <li className="tournament-item">
-                      <a href="#"> Comming  </a>
+                      <a href="#"> Comming Soon </a>
                     </li>
                   </ul>
                 </div>
@@ -84,12 +78,11 @@ export default class CricketNews extends Component {
                 {/* Total game row */}
                 <div className="row">
                   <div className="col-md-12">
-                    <div className="match-heading">
-                    </div>
+                    <div className="match-heading"></div>
 
-                    <div>{this.CricketNewsDataTable()}</div>
                     <div className="wrapper-users">
-                      <div className="container">                        
+                      <div className="container">
+                        <div>{this.CricketNewsDataTable()}</div>
                       </div>
                       <br></br>
                     </div>
@@ -104,9 +97,7 @@ export default class CricketNews extends Component {
                   <ul className="forum-items-list">
                     <li className="forum-item">
                       <span>Update : </span>
-                      <a href="javascript:void(0)">
-                        Comming Soon
-                      </a>
+                      <a href="javascript:void(0)">Comming Soon</a>
                     </li>
                   </ul>
                 </div>

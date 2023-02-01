@@ -13,35 +13,12 @@ export default function Home() {
                 <h6 class="title">Tournaments</h6>
                 <ul class="tournament-items-list">
                   <li class="tournament-item">
-                    <Link to="/first">
+                    <Link to="#">
                       <i class="far fa-futbol"></i>
-                      FIFA World Cup 2022
+                      Coming Soon
                     </Link>
                   </li>
-                  <li class="tournament-item">
-                    <a href="javascript:void(0)">
-                      <i class="fa-solid fa-diamond"></i>
-                      IEM Clogne 2022
-                    </a>
-                  </li>
-                  <li class="tournament-item">
-                    <a href="javascript:void(0)">
-                      <i class="fa-solid fa-basketball"></i>
-                      BAN vs WES Series
-                    </a>
-                  </li>
-                  <li class="tournament-item">
-                    <a href="javascript:void(0)">
-                      <i class="fa-solid fa-basketball"></i>
-                      BAN vs WES Series
-                    </a>
-                  </li>
-                  <li class="tournament-item">
-                    <a href="javascript:void(0)">
-                      <i class="fa-solid fa-basketball"></i>
-                      BAN vs WES Series
-                    </a>
-                  </li>
+                  
                 </ul>
               </div>
             </div>
@@ -60,80 +37,9 @@ export default function Home() {
 
               {/* middle section start from here */}
 
-              <div class="match-schedule-items-wrapper">
-                <link to="/Live-Cricket-Matches"></link>
-                {/* <h4 class="date-title">Saturday – 2022/07/16</h4> */}
-                <div class="match-item-outer">
-                  <div class="match-time">
-                    {/* <i class="fas fa-futbol"></i>
-                    <p>17:00</p> */}
-                  </div>
-                  <div class="match-name">
-                    {/* <p>
-                      Natus Vincere <b> VS </b> Astralis
-                    </p> */}
-                  </div>
-                  <div class="match-type">
-                    {/* <p>IEM Tournaments</p> */}
-                  </div>
-                  <div class="predition-btn">
-                    {/* <Link to="/Prediction"> Prediction </Link> */}
-                  </div>
-                </div>
-                <div class="match-item-outer">
-                  <div class="match-time">
-                    {/* <i class="fas fa-futbol"></i>
-                    <p>17:00</p> */}
-                  </div>
-                  <div class="match-name">
-                    {/* <p>
-                      Natus Vincere <b> VS </b> Astralis
-                    </p> */}
-                  </div>
-                  <div class="match-type">
-                    {/* <p>IEM Tournaments</p> */}
-                  </div>
-                  <div class="predition-btn">
-                    {/* <Link to="/Prediction"> Prediction </Link> */}
-                  </div>
-                </div>
-                <div class="match-item-outer">
-                  <div class="match-time">
-                    {/* <i class="fas fa-futbol"></i>
-                    <p>17:00</p> */}
-                  </div>
-                  <div class="match-name">
-                    {/* <p>
-                      Natus Vincere <b> VS </b> Astralis
-                    </p> */}
-                  </div>
-                  <div class="match-type">
-                    {/* <p>IEM Tournaments</p> */}
-                  </div>
-                  <div class="predition-btn">
-                    {/* <Link to="/Prediction"> Prediction </Link> */}
-                  </div>
-                </div>
-                <div class="match-item-outer">
-                  <div class="match-time">
-                    {/* <i class="fas fa-futbol"></i>
-                    <p>17:00</p> */}
-                  </div>
-                  <div class="match-name">
-                    {/* <p>
-                      Natus Vincere <b> VS </b> Astralis
-                    </p> */}
-                  </div>
-                  <div class="match-type">
-                    {/* <p>IEM Tournaments</p> */}
-                  </div>
-                  <div class="predition-btn">
-                    {/* <Link to="/Prediction"> Prediction </Link> */}
-                  </div>
-                </div>
-              </div>
+              
 
-            {/* right section start from here */}
+              {/* right section start from here */}
 
 
             </div>
